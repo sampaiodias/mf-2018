@@ -11,6 +11,14 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
 /**
  * Classe que resolve o Exercício 11 da Aula 3 da disciplina de Métodos e
@@ -20,6 +28,7 @@ import java.net.URLConnection;
  */
 public class Aplicacao {
     private static final String DEFAULT_URL = "http://repositorio.dados.gov.br/educacao/CADASTRO%20DAS%20IES_2011.csv ";
+    private static final int LINES_TO_IGNORE = 11;
     
     /**
      * O programa baixa o arquivo CSV conforme uma URL fornecida, lista, em 
@@ -51,8 +60,66 @@ public class Aplicacao {
         BufferedReader br = new BufferedReader(inputCSV);
         
         String line;
+        int currentLineNumber = 0;
+        HashMap<String, Integer> amountByState = new HashMap<String, Integer>();
+        
         while ((line = br.readLine()) != null) {
-            System.out.println(line);
+            currentLineNumber++;
+            if (currentLineNumber > LINES_TO_IGNORE) {
+                String[] data = line.split(";");
+                if (data != null && data.length > 8 && !data[0].isEmpty()) {
+                    amountByState.put(data[8], 
+                        amountByState.getOrDefault(data[8], 0) + 1);
+                }
+            }
         }
+        
+        Map<String, Integer> sortedMapDesc = 
+                sortByComparator(amountByState, false);
+        for(Map.Entry<String, Integer> entry : sortedMapDesc.entrySet()) {
+            String key = entry.getKey();
+            Integer value = entry.getValue();
+            System.out.println(key + ": " + value);
+        }
+    }
+    
+    /**
+     * Ordena uma estrutura do tipo Map de acordo com o parâmetro order.
+     * @param unsortMap
+     * @param order Use true para ascendente, false para descendente.
+     * @return Map ordenado.
+     */
+    private static Map<String, Integer> sortByComparator
+        (Map<String, Integer> unsortMap, final boolean order)
+    {
+        List<Entry<String, Integer>> list = 
+                new LinkedList<Entry<String, Integer>>(unsortMap.entrySet());
+
+        // Sorting the list based on values
+        Collections.sort(list, new Comparator<Entry<String, Integer>>()
+        {
+            public int compare(Entry<String, Integer> o1,
+                    Entry<String, Integer> o2)
+            {
+                if (order)
+                {
+                    return o1.getValue().compareTo(o2.getValue());
+                }
+                else
+                {
+                    return o2.getValue().compareTo(o1.getValue());
+
+                }
+            }
+        });
+
+        // Maintaining insertion order with the help of LinkedList
+        Map<String, Integer> sortedMap = new LinkedHashMap<String, Integer>();
+        for (Entry<String, Integer> entry : list)
+        {
+            sortedMap.put(entry.getKey(), entry.getValue());
+        }
+
+        return sortedMap;
     }
 }
