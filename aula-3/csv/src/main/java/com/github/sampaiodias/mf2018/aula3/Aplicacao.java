@@ -27,8 +27,9 @@ import java.util.Map.Entry;
  * @author Lucas Sampaio Dias
  */
 public class Aplicacao {
-    private static final String DEFAULT_URL = "http://repositorio.dados.gov.br/educacao/CADASTRO%20DAS%20IES_2011.csv ";
-    private static final int LINES_TO_IGNORE = 11;
+    public static final String DEFAULT_URL = "http://repositorio.dados.gov.br"
+            + "/educacao/CADASTRO%20DAS%20IES_2011.csv ";
+    public static final int LINES_TO_IGNORE = 11;
     
     /**
      * O programa baixa o arquivo CSV conforme uma URL fornecida, lista, em 
@@ -46,6 +47,22 @@ public class Aplicacao {
      */
     public static void main(String[] args) throws MalformedURLException, 
             IOException {
+        HashMap<String, Integer> amountByState = 
+                getAmountByState(getFile(getFileURL(args)), LINES_TO_IGNORE);        
+        Map<String, Integer> sortedMapDesc = 
+                sortByComparator(amountByState, false);
+        printMap(sortedMapDesc);
+    }
+    
+    /**
+     * Consegue a URL adequada para o arquivo a ser usado pela aplicação de
+     * acordo com os argumentos informados. Caso não haja URL informada ou
+     * algum outro problema seja encontrado, uma URL padrão será utilizada.
+     * @param args
+     * @return
+     * @throws MalformedURLException 
+     */
+    public static URL getFileURL(String[] args) throws MalformedURLException {
         URL url;
         if (args != null && args.length > 0) {
             url = new URL(args[0]);
@@ -53,19 +70,24 @@ public class Aplicacao {
         else {
             url = new URL(DEFAULT_URL);
         }
-        
-        URLConnection urlConn = url.openConnection();
-        InputStreamReader inputCSV = new InputStreamReader(
-                    ((URLConnection) urlConn).getInputStream());
-        BufferedReader br = new BufferedReader(inputCSV);
-        
+        return url;
+    }
+    
+    /**
+     * Lê um arquivo CSV (contido em um BufferedReader) que contém 
+     * @param br 
+     * @param linesToIgnore Ignora o número de linhas informado na contagem 
+     * (ex.: Linhas de cabeçalho)
+     */
+    public static HashMap<String, Integer> getAmountByState(BufferedReader br, 
+            int linesToIgnore) throws IOException {
         String line;
         int currentLineNumber = 0;
         HashMap<String, Integer> amountByState = new HashMap<String, Integer>();
         
         while ((line = br.readLine()) != null) {
             currentLineNumber++;
-            if (currentLineNumber > LINES_TO_IGNORE) {
+            if (currentLineNumber > linesToIgnore) {
                 String[] data = line.split(";");
                 if (data != null && data.length > 8 && !data[0].isEmpty()) {
                     amountByState.put(data[8], 
@@ -74,13 +96,34 @@ public class Aplicacao {
             }
         }
         
-        Map<String, Integer> sortedMapDesc = 
-                sortByComparator(amountByState, false);
-        for(Map.Entry<String, Integer> entry : sortedMapDesc.entrySet()) {
+        return amountByState;
+    }
+    
+    /**
+     * Imprime na saída principal da aplicação todos os elementos de um Map.
+     * @param map 
+     */
+    public static void printMap(Map<String, Integer> map) {
+        for(Map.Entry<String, Integer> entry : map.entrySet()) {
             String key = entry.getKey();
             Integer value = entry.getValue();
             System.out.println(key + ": " + value);
         }
+    }
+    
+    /**
+     * Obtém o arquivo de texto informado em uma URL.
+     * 
+     * @param url Caminho do arquivo
+     * @return
+     * @throws IOException 
+     */
+    public static BufferedReader getFile(URL url) throws IOException {
+        URLConnection urlConn = url.openConnection();
+        InputStreamReader inputCSV = new InputStreamReader(
+                    ((URLConnection) urlConn).getInputStream());
+        BufferedReader br = new BufferedReader(inputCSV);
+        return br;
     }
     
     /**
