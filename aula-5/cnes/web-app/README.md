@@ -2,6 +2,8 @@
 
 Aplicação Web destinada a mostrar os estabelecimentos cadastrados no CNES.
 
+![Screenshot](images/screenshot.png)
+
 ## Instruções
 
 - npm install
