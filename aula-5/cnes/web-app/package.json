@@ -1,0 +1,15 @@
+{
+  "name": "cnes",
+  "version": "1.0.0",
+  "description": "WebApp que mostra estabelecimentos do cnes\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[registrados no cnes\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Lucas Sampaio Dias",
+  "license": "CC 4.0",
+  "dependencies": {
+    "file-system": "^2.2.2",
+    "http-server": "^0.11.1"
+  }
+}
