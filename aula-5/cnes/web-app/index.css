@@ -1,0 +1,37 @@
+.tg {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.tg thead {
+  background-color: #166eeb;
+  display: block;
+  width: 100%;
+}
+
+.tg tbody {
+  height: 314px;
+  width: 100%;
+  display: block;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.tg td {
+  padding: 10px 10px;
+  overflow: hidden;
+  border-bottom: 1px solid #ddd;
+}
+
+.tg th {
+  padding: 10px 0px 10px 10px;
+  color: white;
+}
+
+.tg th:nth-child(2) {
+  padding-left: 39px;
+}
+
+.tg tr:hover {
+  background-color: #ddd;
+}
