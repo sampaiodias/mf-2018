@@ -29,7 +29,7 @@ public class Aplicacao {
             url = args[0];
         }
         if (args.length > 1) {
-            nomeArquivo = DEFAULT_JSON_NAME;
+            nomeArquivo = args[1];
         }
 
         System.out.println("Origem: " + url);
