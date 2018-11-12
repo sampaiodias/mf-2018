@@ -30,11 +30,11 @@ public class DataComAcuraciaDTO {
         return data;
     }
 
-    public final void setAcuracia(final String newAcuracia) {
-        acuracia = newAcuracia;
+    public final void setAcuracia(final String acuracia) {
+        this.acuracia = acuracia;
     }
 
-    public final void setData(final LocalDate newData) {
-        data = newData;
+    public final void setData(final LocalDate data) {
+        this.data = data;
     }
 }

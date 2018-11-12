@@ -70,44 +70,44 @@ public class IdentificadorDTO {
         return tituloEleitoral;
     }
 
-    public final void setCertidao(final CertidaoDTO newCertidao) {
-        certidao = newCertidao;
+    public final void setCertidao(final CertidaoDTO certidao) {
+        this.certidao = certidao;
     }
 
-    public final void setCodigoArea(final Integer newCodigoArea) {
-        codigoArea = newCodigoArea;
+    public final void setCodigoArea(final Integer codigoArea) {
+        this.codigoArea = codigoArea;
     }
 
-    public final void setCodigoTipo(final String newCodigoTipo) {
-        codigoTipo = newCodigoTipo;
+    public final void setCodigoTipo(final String codigoTipo) {
+        this.codigoTipo = codigoTipo;
     }
 
-    public final void setCtps(final CtpsDTO newCtps) {
-        ctps = newCtps;
+    public final void setCtps(final CtpsDTO ctps) {
+        this.ctps = ctps;
     }
 
-    public final void setData(final LocalDate newData) {
-        data = newData;
+    public final void setData(final LocalDate data) {
+        this.data = data;
     }
 
-    public final void setDesignacao(final String newDesignacao) {
-        designacao = newDesignacao;
+    public final void setDesignacao(final String designacao) {
+        this.designacao = designacao;
     }
 
-    public final void setEmissor(final String newEmissor) {
-        emissor = newEmissor;
+    public final void setEmissor(final String emissor) {
+        this.emissor = emissor;
     }
 
-    public final void setId(final Integer newId) {
-        id = newId;
+    public final void setId(final Integer Id) {
+        this.id = Id;
     }
 
-    public final void setIdIndividuo(final Integer newIdIndividuo) {
-        idIndividuo = newIdIndividuo;
+    public final void setIdIndividuo(final Integer idIndividuo) {
+        this.idIndividuo = idIndividuo;
     }
 
     public final void setTituloEleitoral(
-            final TituloEleitoralDTO newTituloEleitoral) {
-        tituloEleitoral = newTituloEleitoral;
+            final TituloEleitoralDTO tituloEleitoral) {
+        this.tituloEleitoral = tituloEleitoral;
     }
 }

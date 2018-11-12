@@ -22,11 +22,11 @@ public class TituloEleitoralDTO {
         return zona;
     }
 
-    public final void setSessao(final Integer newSessao) {
-        sessao = newSessao;
+    public final void setSessao(final Integer sessao) {
+        this.sessao = sessao;
     }
 
-    public final void setZona(final Integer newZona) {
-        zona = newZona;
+    public final void setZona(final Integer zona) {
+        this.zona = zona;
     }
 }

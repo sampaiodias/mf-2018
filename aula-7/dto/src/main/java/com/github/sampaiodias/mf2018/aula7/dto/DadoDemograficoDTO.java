@@ -78,61 +78,61 @@ public class DadoDemograficoDTO {
     }
 
     public final void setCodigoNascimentoOrdem(
-            final Integer newCodigoNascimentoOrdem) {
-        codigoNascimentoOrdem = newCodigoNascimentoOrdem;
+            final Integer codigoNascimentoOrdem) {
+        this.codigoNascimentoOrdem = codigoNascimentoOrdem;
     }
 
     public final void setCodigoNascimentoPluraridade(
-            final Integer newCodigoNascimentoPluraridade) {
-        codigoNascimentoPluraridade = newCodigoNascimentoPluraridade;
+            final Integer codigoNascimentoPluraridade) {
+        this.codigoNascimentoPluraridade = codigoNascimentoPluraridade;
     }
 
     public final void setCodigoNascimentoSeguimento(
-            final String newCodigoNascimentoSeguimento) {
-        codigoNascimentoSeguimento = newCodigoNascimentoSeguimento;
+            final String codigoNascimentoSeguimento) {
+        this.codigoNascimentoSeguimento = codigoNascimentoSeguimento;
     }
 
     public final void setCodigoObitoFonte(
-            final Integer newCodigoObitoFonte) {
-        codigoObitoFonte = newCodigoObitoFonte;
+            final Integer codigoObitoFonte) {
+        this.codigoObitoFonte = codigoObitoFonte;
     }
 
-    public final void setCodigoRaca(final Integer newCodigoRaca) {
-        codigoRaca = newCodigoRaca;
+    public final void setCodigoRaca(final Integer codigoRaca) {
+        this.codigoRaca = codigoRaca;
     }
 
-    public final void setCodigoSexo(final Integer newCodigoSexo) {
-        codigoSexo = newCodigoSexo;
+    public final void setCodigoSexo(final Integer codigoSexo) {
+        this.codigoSexo = codigoSexo;
     }
 
     public final void setCodigoSituacaoFamiliar(
-            final Integer newCodigoSituacaoFamiliar) {
-        codigoSituacaoFamiliar = newCodigoSituacaoFamiliar;
+            final Integer codigoSituacaoFamiliar) {
+        this.codigoSituacaoFamiliar = codigoSituacaoFamiliar;
     }
 
-    public final void setComentario(final String newComentario) {
-        comentario = newComentario;
+    public final void setComentario(final String comentario) {
+        this.comentario = comentario;
     }
 
-    public final void setMae(final String newMae) {
-        mae = newMae;
+    public final void setMae(final String mae) {
+        this.mae = mae;
     }
 
     public final void setNacionalidade(
-            final NacionalidadeDTO newNacionalidade) {
-        nacionalidade = newNacionalidade;
+            final NacionalidadeDTO nacionalidade) {
+        this.nacionalidade = nacionalidade;
     }
 
     public final void setNascimento(
-            final DataComAcuraciaDTO newNascimento) {
-        nascimento = newNascimento;
+            final DataComAcuraciaDTO nascimento) {
+        this.nascimento = nascimento;
     }
 
-    public final void setObito(final DataComAcuraciaDTO newObito) {
-        obito = newObito;
+    public final void setObito(final DataComAcuraciaDTO obito) {
+        this.obito = obito;
     }
 
-    public final void setPai(final String newPai) {
-        pai = newPai;
+    public final void setPai(final String pai) {
+        this.pai = pai;
     }
 }

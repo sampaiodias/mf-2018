@@ -22,11 +22,11 @@ public class EnderecoLinhaDTO {
         return ordem;
     }
     
-    public final void setLinha(final String newLinha) {
-        linha = newLinha;
+    public final void setLinha(final String linha) {
+        this.linha = linha;
     }
 
-    public final void setOrdem(final Integer newOrdem) {
-        ordem = newOrdem;
+    public final void setOrdem(final Integer ordem) {
+        this.ordem = ordem;
     }
 }

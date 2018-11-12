@@ -9,7 +9,7 @@ package com.github.sampaiodias.mf2018.aula7.dto;
  *
  * @author Lucas Sampaio Dias
  */
-public class Comunicacao {
+public class ComunicacaoDTO {
 
     private Integer codigoMeio;
     private String codigoPreferencia;
@@ -32,19 +32,19 @@ public class Comunicacao {
         return detalhe;
     }
 
-    public final void setCodigoMeio(final Integer newCodigoMeio) {
-        codigoMeio = newCodigoMeio;
+    public final void setCodigoMeio(final Integer codigoMeio) {
+        this.codigoMeio = codigoMeio;
     }
 
-    public final void setCodigoPreferencia(final String newCodigoPreferencia) {
-        codigoPreferencia = newCodigoPreferencia;
+    public final void setCodigoPreferencia(final String codigoPreferencia) {
+        this.codigoPreferencia = codigoPreferencia;
     }
 
-    public final void setCodigoUso(final Integer newCodigoUso) {
-        codigoUso = newCodigoUso;
+    public final void setCodigoUso(final Integer codigoUso) {
+        this.codigoUso = codigoUso;
     }
 
-    public final void setDetalhe(final String newDetalhe) {
-        detalhe = newDetalhe;
+    public final void setDetalhe(final String detalhe) {
+        this.detalhe = detalhe;
     }
 }

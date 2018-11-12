@@ -51,13 +51,13 @@ public class IndividuoDTOTest {
         demo.setObito(obito);
         demo.setPai("JOÃO DA SILVA");
 
-        final List<Comunicacao> comunicacoes = new ArrayList<>();
-        final Comunicacao comunicacao1 = new Comunicacao();
+        final List<ComunicacaoDTO> comunicacoes = new ArrayList<>();
+        final ComunicacaoDTO comunicacao1 = new ComunicacaoDTO();
         comunicacao1.setCodigoMeio(1);
         comunicacao1.setCodigoPreferencia("A");
         comunicacao1.setCodigoUso(1);
         comunicacao1.setDetalhe("(11) 3000-0000");
-        final Comunicacao comunicacao2 = new Comunicacao();
+        final ComunicacaoDTO comunicacao2 = new ComunicacaoDTO();
         comunicacao2.setCodigoMeio(1);
         comunicacao2.setCodigoPreferencia("B");
         comunicacao2.setCodigoUso(2);
@@ -141,8 +141,8 @@ public class IndividuoDTOTest {
         utilizacao.setCodigoUso(1);
         utilizacoes.add(utilizacao);
 
-        final List<Nome> nomes = new ArrayList<>();
-        final Nome nome = new Nome();
+        final List<NomeDTO> nomes = new ArrayList<>();
+        final NomeDTO nome = new NomeDTO();
         nome.setCodigoPreferido(1);
         nome.setCodigoUsoCondicional(3);
         nome.setId(1234);
@@ -177,7 +177,7 @@ public class IndividuoDTOTest {
     }
 
     @Test
-    public void toAndFromJson() {
+    public void individuoToAndFromJsonTest() {
         final IndividuoDTO individuo = getIndividuoDeTestes();
         final String json = individuo.toJson();
         final IndividuoDTO individuoObtido = IndividuoDTO.fromJson(json);
@@ -185,7 +185,7 @@ public class IndividuoDTOTest {
     }
 
     @Test
-    public void toAndFromXml() throws JAXBException {
+    public void individuoToAndFromXmlTest() throws JAXBException {
         final IndividuoDTO individuo = getIndividuoDeTestes();
         final String xml = individuo.toXml();
         final IndividuoDTO individuoObtido = IndividuoDTO.fromXml(xml);

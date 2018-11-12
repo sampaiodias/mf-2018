@@ -41,19 +41,19 @@ public class VinculoDTO {
         return relacionamento;
     }
 
-    public final void setDataFim(final LocalDate newDataFim) {
-        dataFim = newDataFim;
+    public final void setDataFim(final LocalDate dataFim) {
+        this.dataFim = dataFim;
     }
 
-    public final void setDataInicio(final LocalDate newDataInicio) {
-        dataInicio = newDataInicio;
+    public final void setDataInicio(final LocalDate dataInicio) {
+        this.dataInicio = dataInicio;
     }
 
-    public final void setIdIdentificador(final Integer newIdIdentificador) {
-        idIdentificador = newIdIdentificador;
+    public final void setIdIdentificador(final Integer idIdentificador) {
+        this.idIdentificador = idIdentificador;
     }
 
-    public final void setRelacionamento(final String newRelacionamento) {
-        relacionamento = newRelacionamento;
+    public final void setRelacionamento(final String relacionamento) {
+        this.relacionamento = relacionamento;
     }
 }

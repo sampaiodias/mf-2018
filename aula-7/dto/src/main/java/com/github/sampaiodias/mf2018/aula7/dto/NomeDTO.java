@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author Lucas Sampaio Dias
  */
-public class Nome {
+public class NomeDTO {
 
     private Integer id;
     private String titulos;
@@ -59,42 +59,42 @@ public class Nome {
         return utilizacoes;
     }
 
-    public final void setCodigoPreferido(final Integer newCodigoPreferido) {
-        codigoPreferido = newCodigoPreferido;
+    public final void setCodigoPreferido(final Integer codigoPreferido) {
+        this.codigoPreferido = codigoPreferido;
     }
 
     public final void setCodigoUsoCondicional(
-            final Integer newCodigoUsoCondicional) {
-        codigoUsoCondicional = newCodigoUsoCondicional;
+            final Integer codigoUsoCondicional) {
+        this.codigoUsoCondicional = codigoUsoCondicional;
     }
 
-    public final void setId(final Integer newId) {
-        id = newId;
+    public final void setId(final Integer id) {
+        this.id = id;
     }
 
-    public final void setNomes(final String newNomes) {
-        nomes = newNomes;
+    public final void setNomes(final String nomes) {
+        this.nomes = nomes;
     }
 
-    public final void setRepresentacoes
-        (final List<RepresentacaoDTO> newRepresentacoes) {
-        representacoes = newRepresentacoes;
+    public final void setSobrenomes(final String sobrenomes) {
+        this.sobrenomes = sobrenomes;
     }
 
-    public final void setSobrenomes(final String newSobrenomes) {
-        sobrenomes = newSobrenomes;
+    public final void setSufixos(final String sufixos) {
+        this.sufixos = sufixos;
     }
 
-    public final void setSufixos(final String newSufixos) {
-        sufixos = newSufixos;
-    }
-
-    public final void setTitulos(final String newTitulos) {
-        titulos = newTitulos;
+    public final void setTitulos(final String titulos) {
+        this.titulos = titulos;
     }
 
     public final void setUtilizacoes(
-            final List<UtilizacaoDTO> newUtilizacoes) {
-        utilizacoes = newUtilizacoes;
+            final List<UtilizacaoDTO> utilizacoes) {
+        this.utilizacoes = utilizacoes;
+    }
+    
+    public final void setRepresentacoes
+        (final List<RepresentacaoDTO> representacoes) {
+        this.representacoes = representacoes;
     }
 }

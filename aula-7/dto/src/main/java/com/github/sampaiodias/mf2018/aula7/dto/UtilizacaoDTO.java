@@ -41,19 +41,19 @@ public class UtilizacaoDTO {
         return idIdentificador;
     }
 
-    public final void setCodigoUso(final Integer newUso) {
-        codigoUso = newUso;
+    public final void setCodigoUso(final Integer uso) {
+        this.codigoUso = uso;
     }
 
-    public final void setDataFinal(final LocalDate newDataFinal) {
-        dataFinal = newDataFinal;
+    public final void setDataFinal(final LocalDate dataFinal) {
+        this.dataFinal = dataFinal;
     }
 
-    public final void setDataInicial(final LocalDate newDataInicial) {
-        dataInicial = newDataInicial;
+    public final void setDataInicial(final LocalDate dataInicial) {
+        this.dataInicial = dataInicial;
     }
 
-    public final void setIdIdentificador(final Integer newIdIdentificador) {
-        idIdentificador = newIdIdentificador;
+    public final void setIdIdentificador(final Integer idIdentificador) {
+        this.idIdentificador = idIdentificador;
     }
 }

@@ -22,11 +22,11 @@ public class RepresentacaoDTO {
         return utilizacao;
     }
 
-    public final void setAlternativa(final String newAlternativa) {
-        alternativa = newAlternativa;
+    public final void setAlternativa(final String alternativa) {
+        this.alternativa = alternativa;
     }
 
-    public final void setUtilizacao(final String newUtilizacao) {
-        utilizacao = newUtilizacao;
+    public final void setUtilizacao(final String utilizacao) {
+        this.utilizacao = utilizacao;
     }
 }

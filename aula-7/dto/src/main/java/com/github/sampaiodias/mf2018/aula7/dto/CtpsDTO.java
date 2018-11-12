@@ -22,11 +22,11 @@ public class CtpsDTO {
         return serie;
     }
 
-    public final void setCodigoEstado(final String newCodigoEstado) {
-        codigoEstado = newCodigoEstado;
+    public final void setCodigoEstado(final String codigoEstado) {
+        this.codigoEstado = codigoEstado;
     }
 
-    public final void setSerie(final Integer newSerie) {
-        serie = newSerie;
+    public final void setSerie(final Integer serie) {
+        this.serie = serie;
     }
 }

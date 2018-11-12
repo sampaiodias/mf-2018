@@ -40,12 +40,12 @@ public class IndividuoDTO {
     }
 
     private Long id;
-    private List<Nome> nomes;
+    private List<NomeDTO> nomes;
     private List<IdentificadorDTO> identificadores;
     private List<VinculoDTO> vinculos;
     private List<EnderecoDTO> enderecos;
     private DadoDemograficoDTO dadoDemografico;
-    private List<Comunicacao> comunicacoes;
+    private List<ComunicacaoDTO> comunicacoes;
 
     public static IndividuoDTO fromJson(final String json) {
         final Gson gson = GSON_BUILDER.create();
@@ -73,7 +73,7 @@ public class IndividuoDTO {
         return sw.toString();
     }
 
-    public final List<Comunicacao> getComunicacoes() {
+    public final List<ComunicacaoDTO> getComunicacoes() {
         return comunicacoes;
     }
 
@@ -93,7 +93,7 @@ public class IndividuoDTO {
         return identificadores;
     }
 
-    public final List<Nome> getNomes() {
+    public final List<NomeDTO> getNomes() {
         return nomes;
     }
 
@@ -101,33 +101,33 @@ public class IndividuoDTO {
         return vinculos;
     }
 
-    public final void setComunicacoes(final List<Comunicacao> newComunicacoes) {
-        comunicacoes = newComunicacoes;
+    public final void setComunicacoes(final List<ComunicacaoDTO> comunicacoes) {
+        this.comunicacoes = comunicacoes;
     }
 
     public final void setDadoDemografico(
-            final DadoDemograficoDTO newDadoDemografico) {
-        dadoDemografico = newDadoDemografico;
+            final DadoDemograficoDTO dadoDemografico) {
+        this.dadoDemografico = dadoDemografico;
     }
 
-    public final void setEnderecos(final List<EnderecoDTO> newEnderecos) {
-        enderecos = newEnderecos;
+    public final void setEnderecos(final List<EnderecoDTO> enderecos) {
+        this.enderecos = enderecos;
     }
 
-    public final void setId(final Long newId) {
-        id = newId;
+    public final void setId(final Long id) {
+        this.id = id;
     }
 
     public final void setIdentificadores(
-            final List<IdentificadorDTO> newIdentificadores) {
-        identificadores = newIdentificadores;
+            final List<IdentificadorDTO> identificadores) {
+        this.identificadores = identificadores;
     }
 
-    public final void setNomes(final List<Nome> newNomes) {
-        nomes = newNomes;
+    public final void setNomes(final List<NomeDTO> nomes) {
+        this.nomes = nomes;
     }
 
-    public final void setVinculos(final List<VinculoDTO> newVinculos) {
-        vinculos = newVinculos;
+    public final void setVinculos(final List<VinculoDTO> vinculos) {
+        this.vinculos = vinculos;
     }
 }

@@ -28,7 +28,7 @@ public class NacionalidadeDTO {
         return codigoMunicipio;
     }
     
-        public final String getCodigoEstado() {
+    public final String getCodigoEstado() {
         return codigoEstado;
     }
 
@@ -40,20 +40,20 @@ public class NacionalidadeDTO {
         return dataEntradaPais;
     }
 
-    public final void setCodigoMunicipio(final Integer newCodigoMunicipio) {
-        codigoMunicipio = newCodigoMunicipio;
+    public final void setCodigoMunicipio(final Integer codigoMunicipio) {
+        this.codigoMunicipio = codigoMunicipio;
     }
     
-    public final void setCodigoEstado(final String newCodigoEstado) {
-        codigoEstado = newCodigoEstado;
+    public final void setCodigoEstado(final String codigoEstado) {
+        this.codigoEstado = codigoEstado;
     }
 
-    public final void setCodigoPais(final Integer newCodigoPais) {
-        codigoPais = newCodigoPais;
+    public final void setCodigoPais(final Integer codigoPais) {
+        this.codigoPais = codigoPais;
     }
 
     public final void setDataEntradaPais(
-            final LocalDate newDataEntradaPais) {
-        dataEntradaPais = newDataEntradaPais;
+            final LocalDate dataEntradaPais) {
+        this.dataEntradaPais = dataEntradaPais;
     }
 }

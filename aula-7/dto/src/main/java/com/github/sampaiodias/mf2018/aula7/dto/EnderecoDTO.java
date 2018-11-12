@@ -74,52 +74,52 @@ public class EnderecoDTO {
         return linhas;
     }
 
-    public final void setBairro(final String newBairro) {
-        bairro = newBairro;
+    public final void setBairro(final String bairro) {
+        this.bairro = bairro;
     }
 
-    public final void setCaixaPostal(final String newCaixaPostal) {
-        caixaPostal = newCaixaPostal;
+    public final void setCaixaPostal(final String caixaPostal) {
+        this.caixaPostal = caixaPostal;
     }
 
-    public final void setCep(final String newCep) {
-        cep = newCep;
+    public final void setCep(final String cep) {
+        this.cep = cep;
     }
 
-    public final void setCodigoEstado(final String newCodigoEstado) {
-        codigoEstado = newCodigoEstado;
+    public final void setCodigoEstado(final String codigoEstado) {
+        this.codigoEstado = codigoEstado;
     }
 
-    public final void setCodigoMunicipio(final Integer newCodigoMunicipio) {
-        codigoMunicipio = newCodigoMunicipio;
+    public final void setCodigoMunicipio(final Integer codigoMunicipio) {
+        this.codigoMunicipio = codigoMunicipio;
     }
 
-    public final void setCodigoPais(final Integer newCódigoPais) {
-        codigoPais = newCódigoPais;
+    public final void setCodigoPais(final Integer codigoPais) {
+        this.codigoPais = codigoPais;
     }
 
-    public final void setCodigoTipo(final Integer newCodigoTipo) {
-        codigoTipo = newCodigoTipo;
+    public final void setCodigoTipo(final Integer codigoTipo) {
+        this.codigoTipo = codigoTipo;
     }
 
-    public final void setDataFim(final DataComAcuraciaDTO newDataFim) {
-        dataFim = newDataFim;
+    public final void setDataFim(final DataComAcuraciaDTO dataFim) {
+        this.dataFim = dataFim;
     }
 
     public final void setDataInicio(
-            final DataComAcuraciaDTO newDataInicio) {
-        dataInicio = newDataInicio;
+            final DataComAcuraciaDTO dataInicio) {
+        this.dataInicio = dataInicio;
     }
 
-    public final void setDistrito(final String newDistrito) {
-        distrito = newDistrito;
+    public final void setDistrito(final String distrito) {
+        this.distrito = distrito;
     }
 
-    public final void setId(final Integer newId) {
-        id = newId;
+    public final void setId(final Integer Id) {
+        this.id = Id;
     }
 
-    public final void setLinhas(final List<EnderecoLinhaDTO> newLinhas) {
-        linhas = newLinhas;
+    public final void setLinhas(final List<EnderecoLinhaDTO> linhas) {
+        this.linhas = linhas;
     }
 }

@@ -37,23 +37,23 @@ public class CertidaoDTO {
         return termo;
     }
 
-    public final void setCartorio(final String newCartorio) {
-        cartorio = newCartorio;
+    public final void setCartorio(final String cartorio) {
+        this.cartorio = cartorio;
     }
 
     public final void setCodigoTipo(final Integer newCodigoTipo) {
-        codigoTipo = newCodigoTipo;
+        this.codigoTipo = newCodigoTipo;
     }
 
-    public final void setFolha(final Integer newFolha) {
-        folha = newFolha;
+    public final void setFolha(final Integer folha) {
+        this.folha = folha;
     }
 
-    public final void setLivro(final Integer newLivro) {
-        livro = newLivro;
+    public final void setLivro(final Integer livro) {
+        this.livro = livro;
     }
 
-    public final void setTermo(final Integer newTermo) {
-        termo = newTermo;
+    public final void setTermo(final Integer termo) {
+        this.termo = termo;
     }
 }
