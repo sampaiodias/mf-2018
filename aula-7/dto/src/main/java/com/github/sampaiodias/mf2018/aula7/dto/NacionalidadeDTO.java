@@ -5,17 +5,23 @@
  */
 package com.github.sampaiodias.mf2018.aula7.dto;
 
+import com.github.sampaiodias.mf2018.aula7.LocalDateXmlAdapter;
 import java.time.LocalDate;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  *
  * @author Lucas Sampaio Dias
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 public class NacionalidadeDTO {
 
     private Integer codigoMunicipio;
     private String codigoEstado;
     private Integer codigoPais;
+    @XmlJavaTypeAdapter(LocalDateXmlAdapter.class)
     private LocalDate dataEntradaPais;
     
     public final Integer getCodigoMunicipio() {

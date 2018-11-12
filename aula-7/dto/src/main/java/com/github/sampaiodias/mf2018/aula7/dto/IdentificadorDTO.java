@@ -5,12 +5,17 @@
  */
 package com.github.sampaiodias.mf2018.aula7.dto;
 
+import com.github.sampaiodias.mf2018.aula7.LocalDateXmlAdapter;
 import java.time.LocalDate;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  *
  * @author Lucas Sampaio Dias
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 public class IdentificadorDTO {
 
     private Integer id;
@@ -18,6 +23,7 @@ public class IdentificadorDTO {
     private String designacao;
     private Integer codigoArea;
     private String emissor;
+    @XmlJavaTypeAdapter(LocalDateXmlAdapter.class)
     private LocalDate data;
     private String codigoTipo;
     private CtpsDTO ctps;
