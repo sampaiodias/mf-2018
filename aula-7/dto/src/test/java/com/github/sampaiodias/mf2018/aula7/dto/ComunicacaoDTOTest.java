@@ -32,7 +32,7 @@ public class ComunicacaoDTOTest {
     }
 
     @Test
-    public void individuoToAndFromJsonTest() {
+    public void comunicacaoToAndFromJsonTest() {
         final ComunicacaoDTO com = getComunicacaoDeTestes();
         final String json = com.toJson();
         final ComunicacaoDTO comObtido = ComunicacaoDTO.fromJson(json);
@@ -40,7 +40,7 @@ public class ComunicacaoDTOTest {
     }
 
     @Test
-    public void individuoToAndFromXmlTest() throws JAXBException {
+    public void comunicacaoToAndFromXmlTest() throws JAXBException {
         final ComunicacaoDTO com = getComunicacaoDeTestes();
         final String xml = com.toXml();
         final ComunicacaoDTO comObtido = ComunicacaoDTO.fromXml(xml);
