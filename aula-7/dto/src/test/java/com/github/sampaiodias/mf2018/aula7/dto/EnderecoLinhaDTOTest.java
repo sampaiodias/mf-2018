@@ -15,10 +15,30 @@ import org.junit.jupiter.api.Test;
  * @author Lucas Sampaio Dias
  */
 public class EnderecoLinhaDTOTest {
-    private EnderecoLinhaDTO EnderecoLinhaDeTestes() {
+    private EnderecoLinhaDTO getEnderecoLinhaDeTestes() {
         EnderecoLinhaDTO linha = new EnderecoLinhaDTO();
         linha.setLinha("A");
         linha.setOrdem(123);
         return linha;
+    }
+    
+    private boolean isEquals(final Object a, final Object b) {
+        return EqualsBuilder.reflectionEquals(a, b, false, Object.class, true);
+    }
+
+    @Test
+    public void linhaToAndFromJsonTest() {
+        final EnderecoLinhaDTO linha = getEnderecoLinhaDeTestes();
+        final String json = linha.toJson();
+        final EnderecoLinhaDTO linhaObtida = EnderecoLinhaDTO.fromJson(json);
+        Assertions.assertTrue(isEquals(linha, linhaObtida));
+    }
+
+    @Test
+    public void linhaToAndFromXmlTest() throws JAXBException {
+        final EnderecoLinhaDTO linha = getEnderecoLinhaDeTestes();
+        final String xml = linha.toXml();
+        final EnderecoLinhaDTO linhaObtida = EnderecoLinhaDTO.fromXml(xml);
+        Assertions.assertTrue(isEquals(linha, linhaObtida));
     }
 }
