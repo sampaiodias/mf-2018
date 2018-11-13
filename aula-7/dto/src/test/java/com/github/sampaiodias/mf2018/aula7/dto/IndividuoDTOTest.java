@@ -172,7 +172,7 @@ public class IndividuoDTOTest {
         return individuo;
     }
     
-    private boolean haveEqualFields(final Object a, final Object b) {
+    private boolean isEquals(final Object a, final Object b) {
         return EqualsBuilder.reflectionEquals(a, b, false, Object.class, true);
     }
 
@@ -181,7 +181,7 @@ public class IndividuoDTOTest {
         final IndividuoDTO individuo = getIndividuoDeTestes();
         final String json = individuo.toJson();
         final IndividuoDTO individuoObtido = IndividuoDTO.fromJson(json);
-        Assertions.assertTrue(haveEqualFields(individuo, individuoObtido));
+        Assertions.assertTrue(isEquals(individuo, individuoObtido));
     }
 
     @Test
@@ -189,6 +189,6 @@ public class IndividuoDTOTest {
         final IndividuoDTO individuo = getIndividuoDeTestes();
         final String xml = individuo.toXml();
         final IndividuoDTO individuoObtido = IndividuoDTO.fromXml(xml);
-        Assertions.assertTrue(haveEqualFields(individuo, individuoObtido));
+        Assertions.assertTrue(isEquals(individuo, individuoObtido));
     }
 }

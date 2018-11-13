@@ -5,11 +5,35 @@
  */
 package com.github.sampaiodias.mf2018.aula7.dto;
 
+import com.github.sampaiodias.mf2018.aula7.LocalDateJsonDeserializer;
+import com.github.sampaiodias.mf2018.aula7.LocalDateJsonSerializer;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import java.io.StringReader;
+import java.io.StringWriter;
+import java.time.LocalDate;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  *
  * @author Lucas Sampaio Dias
  */
+@XmlRootElement(name = "dadodemografico")
 public class DadoDemograficoDTO {
+    
+    private final static GsonBuilder GSON_BUILDER;
+    static {
+        GSON_BUILDER = new GsonBuilder();
+        GSON_BUILDER.registerTypeAdapter(LocalDate.class,
+                new LocalDateJsonSerializer());
+        GSON_BUILDER.registerTypeAdapter(LocalDate.class,
+                new LocalDateJsonDeserializer());
+        GSON_BUILDER.setPrettyPrinting();
+    }
 
     private Integer codigoSexo;
     private Integer codigoRaca;
@@ -24,6 +48,35 @@ public class DadoDemograficoDTO {
     private DataComAcuraciaDTO obito;
     private Integer codigoObitoFonte;
     private String comentario;
+    
+    public static DadoDemograficoDTO fromJson(final String json) {
+        final Gson gson = GSON_BUILDER.create();
+        return gson.fromJson(json, DadoDemograficoDTO.class);
+    }
+
+    public static DadoDemograficoDTO fromXml(final String xml) 
+            throws JAXBException {
+        final JAXBContext context = 
+                JAXBContext.newInstance(DadoDemograficoDTO.class);
+        final Unmarshaller um = context.createUnmarshaller();
+        final StringReader sr = new StringReader(xml);
+        return (DadoDemograficoDTO) um.unmarshal(sr);
+    }
+
+    public String toJson() {
+        final Gson gson = GSON_BUILDER.create();
+        return gson.toJson(this);
+    }
+
+    public String toXml() throws JAXBException {
+        final JAXBContext context = 
+                JAXBContext.newInstance(DadoDemograficoDTO.class);
+        final Marshaller m = context.createMarshaller();
+        m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+        final StringWriter sw = new StringWriter();
+        m.marshal(this, sw);
+        return sw.toString();
+    }
     
     public final Integer getCodigoNascimentoOrdem() {
         return codigoNascimentoOrdem;

@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Copyright (c) 2018.
+ * Instituto de Informática (UFG)
+ * Creative Commons Attribution 4.0 International License.
  */
 package com.github.sampaiodias.mf2018.aula7.dto;
 
@@ -22,7 +22,7 @@ public class CtpsDTOTest {
         return ctps;
     }
     
-    private boolean haveEqualFields(final Object a, final Object b) {
+    private boolean isEquals(final Object a, final Object b) {
         return EqualsBuilder.reflectionEquals(a, b, false, Object.class, true);
     }
 
@@ -31,7 +31,7 @@ public class CtpsDTOTest {
         final CtpsDTO ctps = getCtpsDeTestes();
         final String json = ctps.toJson();
         final CtpsDTO ctpsObtido = CtpsDTO.fromJson(json);
-        Assertions.assertTrue(haveEqualFields(ctps, ctpsObtido));
+        Assertions.assertTrue(isEquals(ctps, ctpsObtido));
     }
 
     @Test
@@ -39,6 +39,6 @@ public class CtpsDTOTest {
         final CtpsDTO ctps = getCtpsDeTestes();
         final String xml = ctps.toXml();
         final CtpsDTO ctpsObtido = CtpsDTO.fromXml(xml);
-        Assertions.assertTrue(haveEqualFields(ctps, ctpsObtido));
+        Assertions.assertTrue(isEquals(ctps, ctpsObtido));
     }
 }

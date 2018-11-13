@@ -27,7 +27,7 @@ public class ComunicacaoDTOTest {
         return com;
     }
     
-    private boolean haveEqualFields(final Object a, final Object b) {
+    private boolean isEquals(final Object a, final Object b) {
         return EqualsBuilder.reflectionEquals(a, b, false, Object.class, true);
     }
 
@@ -36,7 +36,7 @@ public class ComunicacaoDTOTest {
         final ComunicacaoDTO com = getComunicacaoDeTestes();
         final String json = com.toJson();
         final ComunicacaoDTO comObtido = ComunicacaoDTO.fromJson(json);
-        Assertions.assertTrue(haveEqualFields(com, comObtido));
+        Assertions.assertTrue(isEquals(com, comObtido));
     }
 
     @Test
@@ -44,6 +44,6 @@ public class ComunicacaoDTOTest {
         final ComunicacaoDTO com = getComunicacaoDeTestes();
         final String xml = com.toXml();
         final ComunicacaoDTO comObtido = ComunicacaoDTO.fromXml(xml);
-        Assertions.assertTrue(haveEqualFields(com, comObtido));
+        Assertions.assertTrue(isEquals(com, comObtido));
     }
 }

@@ -26,7 +26,7 @@ public class CertidaoDTOTest {
         return certidao;
     }
     
-    private boolean haveEqualFields(final Object a, final Object b) {
+    private boolean isEquals(final Object a, final Object b) {
         return EqualsBuilder.reflectionEquals(a, b, false, Object.class, true);
     }
     
@@ -35,7 +35,7 @@ public class CertidaoDTOTest {
         final CertidaoDTO certidao = getCertidaoDeTestes();
         final String json = certidao.toJson();
         final CertidaoDTO certidaoObtida = CertidaoDTO.fromJson(json);
-        Assertions.assertTrue(haveEqualFields(certidao, certidaoObtida));
+        Assertions.assertTrue(isEquals(certidao, certidaoObtida));
     }
 
     @Test
@@ -43,6 +43,6 @@ public class CertidaoDTOTest {
         final CertidaoDTO certidao = getCertidaoDeTestes();
         final String xml = certidao.toXml();
         final CertidaoDTO certidaoObtida = CertidaoDTO.fromXml(xml);
-        Assertions.assertTrue(haveEqualFields(certidao, certidaoObtida));
+        Assertions.assertTrue(isEquals(certidao, certidaoObtida));
     }
 }
