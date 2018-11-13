@@ -5,10 +5,13 @@
  */
 package com.github.sampaiodias.mf2018.aula7.dto;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  *
  * @author Lucas Sampaio Dias
  */
+@XmlRootElement(name = "tituloeleitoral")
 public class TituloEleitoralDTO {
 
     private Integer zona;

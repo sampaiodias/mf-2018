@@ -9,6 +9,7 @@ import com.github.sampaiodias.mf2018.aula7.LocalDateXmlAdapter;
 import java.time.LocalDate;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
@@ -16,6 +17,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * @author Lucas Sampaio Dias
  */
 @XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "utilizacao")
 public class UtilizacaoDTO {
 
     private Integer idIdentificador;
