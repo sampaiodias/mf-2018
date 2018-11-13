@@ -5,10 +5,13 @@
  */
 package com.github.sampaiodias.mf2018.aula7.dto;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  *
  * @author Lucas Sampaio Dias
  */
+@XmlRootElement(name = "enderecolinha")
 public class EnderecoLinhaDTO {
 
     private String linha;

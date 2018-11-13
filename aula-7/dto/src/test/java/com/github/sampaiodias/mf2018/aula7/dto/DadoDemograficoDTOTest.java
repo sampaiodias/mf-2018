@@ -52,7 +52,6 @@ public class DadoDemograficoDTOTest {
     public void dadoDemograficoToAndFromJsonTest() {
         final DadoDemograficoDTO dado = getDadoDemograficoDeTestes();
         final String json = dado.toJson();
-        System.out.println(json);
         final DadoDemograficoDTO dadoObtido = DadoDemograficoDTO.fromJson(json);
         Assertions.assertTrue(isEquals(dado, dadoObtido));
     }
@@ -61,7 +60,6 @@ public class DadoDemograficoDTOTest {
     public void dadoDemograficoToAndFromXmlTest() throws JAXBException {
         final DadoDemograficoDTO dado = getDadoDemograficoDeTestes();
         final String xml = dado.toXml();
-        System.out.println(xml);
         final DadoDemograficoDTO dadoObtido = DadoDemograficoDTO.fromXml(xml);
         Assertions.assertTrue(isEquals(dado, dadoObtido));
     }

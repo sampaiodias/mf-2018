@@ -5,13 +5,36 @@
  */
 package com.github.sampaiodias.mf2018.aula7.dto;
 
+import com.github.sampaiodias.mf2018.aula7.LocalDateJsonDeserializer;
+import com.github.sampaiodias.mf2018.aula7.LocalDateJsonSerializer;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import java.io.StringReader;
+import java.io.StringWriter;
+import java.time.LocalDate;
 import java.util.List;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author Lucas Sampaio Dias
  */
+@XmlRootElement(name = "endereco")
 public class EnderecoDTO {
+    
+    private final static GsonBuilder GSON_BUILDER;
+    static {
+        GSON_BUILDER = new GsonBuilder();
+        GSON_BUILDER.registerTypeAdapter(LocalDate.class,
+                new LocalDateJsonSerializer());
+        GSON_BUILDER.registerTypeAdapter(LocalDate.class,
+                new LocalDateJsonDeserializer());
+        GSON_BUILDER.setPrettyPrinting();
+    }
 
     private Integer id;
     private String bairro;
@@ -25,6 +48,32 @@ public class EnderecoDTO {
     private DataComAcuraciaDTO dataInicio;
     private DataComAcuraciaDTO dataFim;
     private List<EnderecoLinhaDTO> linhas;
+    
+    public static EnderecoDTO fromJson(final String json) {
+        final Gson gson = GSON_BUILDER.create();
+        return gson.fromJson(json, EnderecoDTO.class);
+    }
+
+    public static EnderecoDTO fromXml(final String xml) throws JAXBException {
+        final JAXBContext context = JAXBContext.newInstance(EnderecoDTO.class);
+        final Unmarshaller um = context.createUnmarshaller();
+        final StringReader sr = new StringReader(xml);
+        return (EnderecoDTO) um.unmarshal(sr);
+    }
+
+    public String toJson() {
+        final Gson gson = GSON_BUILDER.create();
+        return gson.toJson(this);
+    }
+
+    public String toXml() throws JAXBException {
+        final JAXBContext context = JAXBContext.newInstance(EnderecoDTO.class);
+        final Marshaller m = context.createMarshaller();
+        m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+        final StringWriter sw = new StringWriter();
+        m.marshal(this, sw);
+        return sw.toString();
+    }
 
     public final String getBairro() {
         return bairro;
