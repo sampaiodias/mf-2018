@@ -1,4 +1,4 @@
-package com.github.sampaiodias.mf2018.aula7;
+package com.github.sampaiodias.mf2018.aula7.adapters;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

@@ -5,8 +5,8 @@
  */
 package com.github.sampaiodias.mf2018.aula7.dto;
 
-import com.github.sampaiodias.mf2018.aula7.LocalDateJsonDeserializer;
-import com.github.sampaiodias.mf2018.aula7.LocalDateJsonSerializer;
+import com.github.sampaiodias.mf2018.aula7.adapters.LocalDateJsonDeserializer;
+import com.github.sampaiodias.mf2018.aula7.adapters.LocalDateJsonSerializer;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.time.LocalDate;
