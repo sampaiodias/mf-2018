@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+message Identificador {
+  required int32 id = 0
+  required int32 idIndividuo = 1
+  required string designacao = 2
+  required int32 codigoArea = 3
+  required string emissor = 4
+  required string data = 5
+  required string codigoTipo = 6
+
+  message Certidao {
+    required string cartorio = 0
+  }
+
+  required Certidao certidao = 7
+
+  message TituloEleitoral {
+    required int32 zona = 0
+    required int32 sessao = 1
+  }
+
+  required TituloEleitoral tituloEleitoral = 8
+}
