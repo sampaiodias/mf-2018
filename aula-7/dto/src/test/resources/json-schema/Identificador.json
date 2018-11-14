@@ -5,28 +5,132 @@
   "type": "object",
   "title": "The Root Schema",
   "required": [
-    "linha",
-    "ordem"
+    "id",
+    "idIndividuo",
+    "designacao",
+    "codigoArea",
+    "emissor",
+    "data",
+    "codigoTipo",
+    "certidao",
+    "tituloEleitoral"
   ],
   "properties": {
-    "linha": {
-      "$id": "#/properties/linha",
-      "type": "string",
-      "title": "The Linha Schema",
-      "default": "",
-      "examples": [
-        "A"
-      ],
-      "pattern": "^(.*)$"
-    },
-    "ordem": {
-      "$id": "#/properties/ordem",
+    "id": {
+      "$id": "#/properties/id",
       "type": "integer",
-      "title": "The Ordem Schema",
+      "title": "The Id Schema",
+      "default": 0,
+      "examples": [
+        1234
+      ]
+    },
+    "idIndividuo": {
+      "$id": "#/properties/idIndividuo",
+      "type": "integer",
+      "title": "The Idindividuo Schema",
       "default": 0,
       "examples": [
         123
       ]
+    },
+    "designacao": {
+      "$id": "#/properties/designacao",
+      "type": "string",
+      "title": "The Designacao Schema",
+      "default": "",
+      "examples": [
+        "DESIGNACAO"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "codigoArea": {
+      "$id": "#/properties/codigoArea",
+      "type": "integer",
+      "title": "The Codigoarea Schema",
+      "default": 0,
+      "examples": [
+        12345
+      ]
+    },
+    "emissor": {
+      "$id": "#/properties/emissor",
+      "type": "string",
+      "title": "The Emissor Schema",
+      "default": "",
+      "examples": [
+        "EMISSOR"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "data": {
+      "$id": "#/properties/data",
+      "type": "string",
+      "title": "The Data Schema",
+      "default": "",
+      "examples": [
+        "20181114"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "codigoTipo": {
+      "$id": "#/properties/codigoTipo",
+      "type": "string",
+      "title": "The Codigotipo Schema",
+      "default": "",
+      "examples": [
+        "TIPO"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "certidao": {
+      "$id": "#/properties/certidao",
+      "type": "object",
+      "title": "The Certidao Schema",
+      "required": [
+        "cartorio"
+      ],
+      "properties": {
+        "cartorio": {
+          "$id": "#/properties/certidao/properties/cartorio",
+          "type": "string",
+          "title": "The Cartorio Schema",
+          "default": "",
+          "examples": [
+            "A"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "tituloEleitoral": {
+      "$id": "#/properties/tituloEleitoral",
+      "type": "object",
+      "title": "The Tituloeleitoral Schema",
+      "required": [
+        "zona",
+        "sessao"
+      ],
+      "properties": {
+        "zona": {
+          "$id": "#/properties/tituloEleitoral/properties/zona",
+          "type": "integer",
+          "title": "The Zona Schema",
+          "default": 0,
+          "examples": [
+            2
+          ]
+        },
+        "sessao": {
+          "$id": "#/properties/tituloEleitoral/properties/sessao",
+          "type": "integer",
+          "title": "The Sessao Schema",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        }
+      }
     }
   }
 }
