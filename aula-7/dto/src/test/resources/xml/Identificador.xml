@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<identificador>
+    <id>1234</id>
+    <idIndividuo>123</idIndividuo>
+    <designacao>DESIGNACAO</designacao>
+    <codigoArea>12345</codigoArea>
+    <emissor>EMISSOR</emissor>
+    <data>20181114</data>
+    <codigoTipo>TIPO</codigoTipo>
+    <certidao>
+        <cartorio>A</cartorio>
+    </certidao>
+    <tituloEleitoral>
+        <sessao>1</sessao>
+        <zona>2</zona>
+    </tituloEleitoral>
+</identificador>

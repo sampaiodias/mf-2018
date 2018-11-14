@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<endereco>
+    <bairro>BAIRRO TESTE</bairro>
+    <caixaPostal>12345</caixaPostal>
+    <cep>12345-678</cep>
+    <codigoEstado>GO</codigoEstado>
+    <codigoMunicipio>123</codigoMunicipio>
+    <codigoPais>55</codigoPais>
+    <codigoTipo>1234</codigoTipo>
+    <dataFim>
+        <data>20181114</data>
+        <acuracia>Acurado</acuracia>
+    </dataFim>
+    <dataInicio>
+        <data>20181114</data>
+        <acuracia>Acurado</acuracia>
+    </dataInicio>
+    <distrito>DISTRITO TESTE</distrito>
+    <id>65</id>
+    <linhas>
+        <linha>A</linha>
+        <ordem>123</ordem>
+    </linhas>
+</endereco>

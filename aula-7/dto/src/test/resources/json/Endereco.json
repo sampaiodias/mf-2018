@@ -1,0 +1,25 @@
+{
+  "id": 65,
+  "bairro": "BAIRRO TESTE",
+  "distrito": "DISTRITO TESTE",
+  "cep": "12345-678",
+  "caixaPostal": "12345",
+  "codigoMunicipio": 123,
+  "codigoEstado": "GO",
+  "codigoPais": 55,
+  "codigoTipo": 1234,
+  "dataInicio": {
+    "data": "20181114",
+    "acuracia": "Acurado"
+  },
+  "dataFim": {
+    "data": "20181114",
+    "acuracia": "Acurado"
+  },
+  "linhas": [
+    {
+      "linha": "A",
+      "ordem": 123
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "codigoSexo": 0,
+  "codigoRaca": 1,
+  "nacionalidade": {
+    "codigoMunicipio": 1111,
+    "codigoEstado": "MG",
+    "codigoPais": 999,
+    "dataEntradaPais": "20181114"
+  },
+  "mae": "MÃE",
+  "pai": "PAI",
+  "codigoSituacaoFamiliar": 2,
+  "nascimento": {
+    "data": "20181114",
+    "acuracia": "Acurado"
+  },
+  "codigoNascimentoPluraridade": 12345,
+  "codigoNascimentoOrdem": 123,
+  "codigoNascimentoSeguimento": "ABC",
+  "codigoObitoFonte": 0,
+  "comentario": "..."
+}

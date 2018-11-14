@@ -1,0 +1,54 @@
+ 1 {
+ 2   "definitions": {},
+ 3   "$schema": "http://json-schema.org/draft-07/schema#",
+ 4   "$id": "http://example.com/root.json",
+ 5   "type": "object",
+ 6   "title": "The Root Schema",
+ 7   "required": [
+ 8     "idIdentificador",
+ 9     "relacionamento",
+10     "dataInicio",
+11     "dataFim"
+12   ],
+13   "properties": {
+14     "idIdentificador": {
+15       "$id": "#/properties/idIdentificador",
+16       "type": "integer",
+17       "title": "The Ididentificador Schema",
+18       "default": 0,
+19       "examples": [
+20         123
+21       ]
+22     },
+23     "relacionamento": {
+24       "$id": "#/properties/relacionamento",
+25       "type": "string",
+26       "title": "The Relacionamento Schema",
+27       "default": "",
+28       "examples": [
+29         "RELACIONAMENTO TESTE"
+30       ],
+31       "pattern": "^(.*)$"
+32     },
+33     "dataInicio": {
+34       "$id": "#/properties/dataInicio",
+35       "type": "string",
+36       "title": "The Datainicio Schema",
+37       "default": "",
+38       "examples": [
+39         "20181114"
+40       ],
+41       "pattern": "^(.*)$"
+42     },
+43     "dataFim": {
+44       "$id": "#/properties/dataFim",
+45       "type": "string",
+46       "title": "The Datafim Schema",
+47       "default": "",
+48       "examples": [
+49         "20181114"
+50       ],
+51       "pattern": "^(.*)$"
+52     }
+53   }
+54 }

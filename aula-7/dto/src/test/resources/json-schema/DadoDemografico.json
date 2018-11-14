@@ -1,0 +1,199 @@
+  1 {
+  2   "definitions": {},
+  3   "$schema": "http://json-schema.org/draft-07/schema#",
+  4   "$id": "http://example.com/root.json",
+  5   "type": "object",
+  6   "title": "The Root Schema",
+  7   "required": [
+  8     "codigoSexo",
+  9     "codigoRaca",
+ 10     "nacionalidade",
+ 11     "mae",
+ 12     "pai",
+ 13     "codigoSituacaoFamiliar",
+ 14     "nascimento",
+ 15     "codigoNascimentoPluraridade",
+ 16     "codigoNascimentoOrdem",
+ 17     "codigoNascimentoSeguimento",
+ 18     "codigoObitoFonte",
+ 19     "comentario"
+ 20   ],
+ 21   "properties": {
+ 22     "codigoSexo": {
+ 23       "$id": "#/properties/codigoSexo",
+ 24       "type": "integer",
+ 25       "title": "The Codigosexo Schema",
+ 26       "default": 0,
+ 27       "examples": [
+ 28         0
+ 29       ]
+ 30     },
+ 31     "codigoRaca": {
+ 32       "$id": "#/properties/codigoRaca",
+ 33       "type": "integer",
+ 34       "title": "The Codigoraca Schema",
+ 35       "default": 0,
+ 36       "examples": [
+ 37         1
+ 38       ]
+ 39     },
+ 40     "nacionalidade": {
+ 41       "$id": "#/properties/nacionalidade",
+ 42       "type": "object",
+ 43       "title": "The Nacionalidade Schema",
+ 44       "required": [
+ 45         "codigoMunicipio",
+ 46         "codigoEstado",
+ 47         "codigoPais",
+ 48         "dataEntradaPais"
+ 49       ],
+ 50       "properties": {
+ 51         "codigoMunicipio": {
+ 52           "$id": "#/properties/nacionalidade/properties/codigoMunicipio",
+ 53           "type": "integer",
+ 54           "title": "The Codigomunicipio Schema",
+ 55           "default": 0,
+ 56           "examples": [
+ 57             1111
+ 58           ]
+ 59         },
+ 60         "codigoEstado": {
+ 61           "$id": "#/properties/nacionalidade/properties/codigoEstado",
+ 62           "type": "string",
+ 63           "title": "The Codigoestado Schema",
+ 64           "default": "",
+ 65           "examples": [
+ 66             "MG"
+ 67           ],
+ 68           "pattern": "^(.*)$"
+ 69         },
+ 70         "codigoPais": {
+ 71           "$id": "#/properties/nacionalidade/properties/codigoPais",
+ 72           "type": "integer",
+ 73           "title": "The Codigopais Schema",
+ 74           "default": 0,
+ 75           "examples": [
+ 76             999
+ 77           ]
+ 78         },
+ 79         "dataEntradaPais": {
+ 80           "$id": "#/properties/nacionalidade/properties/dataEntradaPais",
+ 81           "type": "string",
+ 82           "title": "The Dataentradapais Schema",
+ 83           "default": "",
+ 84           "examples": [
+ 85             "20181114"
+ 86           ],
+ 87           "pattern": "^(.*)$"
+ 88         }
+ 89       }
+ 90     },
+ 91     "mae": {
+ 92       "$id": "#/properties/mae",
+ 93       "type": "string",
+ 94       "title": "The Mae Schema",
+ 95       "default": "",
+ 96       "examples": [
+ 97         "MÃE"
+ 98       ],
+ 99       "pattern": "^(.*)$"
+100     },
+101     "pai": {
+102       "$id": "#/properties/pai",
+103       "type": "string",
+104       "title": "The Pai Schema",
+105       "default": "",
+106       "examples": [
+107         "PAI"
+108       ],
+109       "pattern": "^(.*)$"
+110     },
+111     "codigoSituacaoFamiliar": {
+112       "$id": "#/properties/codigoSituacaoFamiliar",
+113       "type": "integer",
+114       "title": "The Codigosituacaofamiliar Schema",
+115       "default": 0,
+116       "examples": [
+117         2
+118       ]
+119     },
+120     "nascimento": {
+121       "$id": "#/properties/nascimento",
+122       "type": "object",
+123       "title": "The Nascimento Schema",
+124       "required": [
+125         "data",
+126         "acuracia"
+127       ],
+128       "properties": {
+129         "data": {
+130           "$id": "#/properties/nascimento/properties/data",
+131           "type": "string",
+132           "title": "The Data Schema",
+133           "default": "",
+134           "examples": [
+135             "20181114"
+136           ],
+137           "pattern": "^(.*)$"
+138         },
+139         "acuracia": {
+140           "$id": "#/properties/nascimento/properties/acuracia",
+141           "type": "string",
+142           "title": "The Acuracia Schema",
+143           "default": "",
+144           "examples": [
+145             "Acurado"
+146           ],
+147           "pattern": "^(.*)$"
+148         }
+149       }
+150     },
+151     "codigoNascimentoPluraridade": {
+152       "$id": "#/properties/codigoNascimentoPluraridade",
+153       "type": "integer",
+154       "title": "The Codigonascimentopluraridade Schema",
+155       "default": 0,
+156       "examples": [
+157         12345
+158       ]
+159     },
+160     "codigoNascimentoOrdem": {
+161       "$id": "#/properties/codigoNascimentoOrdem",
+162       "type": "integer",
+163       "title": "The Codigonascimentoordem Schema",
+164       "default": 0,
+165       "examples": [
+166         123
+167       ]
+168     },
+169     "codigoNascimentoSeguimento": {
+170       "$id": "#/properties/codigoNascimentoSeguimento",
+171       "type": "string",
+172       "title": "The Codigonascimentoseguimento Schema",
+173       "default": "",
+174       "examples": [
+175         "ABC"
+176       ],
+177       "pattern": "^(.*)$"
+178     },
+179     "codigoObitoFonte": {
+180       "$id": "#/properties/codigoObitoFonte",
+181       "type": "integer",
+182       "title": "The Codigoobitofonte Schema",
+183       "default": 0,
+184       "examples": [
+185         0
+186       ]
+187     },
+188     "comentario": {
+189       "$id": "#/properties/comentario",
+190       "type": "string",
+191       "title": "The Comentario Schema",
+192       "default": "",
+193       "examples": [
+194         "..."
+195       ],
+196       "pattern": "^(.*)$"
+197     }
+198   }
+199 }?

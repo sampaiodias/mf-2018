@@ -1,0 +1,53 @@
+ 1 {
+ 2   "definitions": {},
+ 3   "$schema": "http://json-schema.org/draft-07/schema#",
+ 4   "$id": "http://example.com/root.json",
+ 5   "type": "object",
+ 6   "title": "The Root Schema",
+ 7   "required": [
+ 8     "codigoMeio",
+ 9     "codigoPreferencia",
+10     "codigoUso",
+11     "detalhe"
+12   ],
+13   "properties": {
+14     "codigoMeio": {
+15       "$id": "#/properties/codigoMeio",
+16       "type": "integer",
+17       "title": "The Codigomeio Schema",
+18       "default": 0,
+19       "examples": [
+20         1234
+21       ]
+22     },
+23     "codigoPreferencia": {
+24       "$id": "#/properties/codigoPreferencia",
+25       "type": "string",
+26       "title": "The Codigopreferencia Schema",
+27       "default": "",
+28       "examples": [
+29         "A"
+30       ],
+31       "pattern": "^(.*)$"
+32     },
+33     "codigoUso": {
+34       "$id": "#/properties/codigoUso",
+35       "type": "integer",
+36       "title": "The Codigouso Schema",
+37       "default": 0,
+38       "examples": [
+39         1234
+40       ]
+41     },
+42     "detalhe": {
+43       "$id": "#/properties/detalhe",
+44       "type": "string",
+45       "title": "The Detalhe Schema",
+46       "default": "",
+47       "examples": [
+48         "..."
+49       ],
+50       "pattern": "^(.*)$"
+51     }
+52   }
+53 }

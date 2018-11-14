@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dadodemografico>
+    <codigoNascimentoOrdem>123</codigoNascimentoOrdem>
+    <codigoNascimentoPluraridade>12345</codigoNascimentoPluraridade>
+    <codigoNascimentoSeguimento>ABC</codigoNascimentoSeguimento>
+    <codigoObitoFonte>0</codigoObitoFonte>
+    <codigoRaca>1</codigoRaca>
+    <codigoSexo>0</codigoSexo>
+    <codigoSituacaoFamiliar>2</codigoSituacaoFamiliar>
+    <comentario>...</comentario>
+    <mae>MÃE</mae>
+    <nacionalidade>
+        <codigoMunicipio>1111</codigoMunicipio>
+        <codigoEstado>MG</codigoEstado>
+        <codigoPais>999</codigoPais>
+        <dataEntradaPais>20181114</dataEntradaPais>
+    </nacionalidade>
+    <nascimento>
+        <data>20181114</data>
+        <acuracia>Acurado</acuracia>
+    </nascimento>
+    <pai>PAI</pai>
+</dadodemografico>

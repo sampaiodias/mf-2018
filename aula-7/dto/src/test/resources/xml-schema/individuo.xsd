@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+         <!-- XML Schema Generated from XML Document on Wed Nov 14 2018 11:38:46 GMT-0200 (Horário de Verão de Brasília) -->
+         <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+         <xs:element name="individuo">
+               <xs:complexType>
+                     <xs:sequence>
+                           <xs:element name="id" type="xs:int"></xs:element>
+                           <xs:element name="nomes">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="codigoPreferido" type="xs:int"></xs:element>
+                                             <xs:element name="codigoUsoCondicional" type="xs:int"></xs:element>
+                                             <xs:element name="id" type="xs:int"></xs:element>
+                                             <xs:element name="nomes" type="xs:string"></xs:element>
+                                             <xs:element name="representacoes">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="alternativa" type="xs:string"></xs:element>
+                                                               <xs:element name="utilizacao" type="xs:string"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                             <xs:element name="sobrenomes" type="xs:string"></xs:element>
+                                             <xs:element name="sufixos" type="xs:string"></xs:element>
+                                             <xs:element name="titulos" type="xs:string"></xs:element>
+                                             <xs:element name="utilizacoes">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="idIdentificador" type="xs:int"></xs:element>
+                                                               <xs:element name="codigoUso" type="xs:int"></xs:element>
+                                                               <xs:element name="dataInicial" type="xs:int"></xs:element>
+                                                               <xs:element name="dataFinal" type="xs:int"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="identificadores">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="id" type="xs:int"></xs:element>
+                                             <xs:element name="idIndividuo" type="xs:int"></xs:element>
+                                             <xs:element name="designacao" type="xs:string"></xs:element>
+                                             <xs:element name="codigoArea" type="xs:int"></xs:element>
+                                             <xs:element name="emissor" type="xs:string"></xs:element>
+                                             <xs:element name="data" type="xs:int"></xs:element>
+                                             <xs:element name="codigoTipo" type="xs:string"></xs:element>
+                                             <xs:element name="ctps">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="codigoEstado" type="xs:string"></xs:element>
+                                                               <xs:element name="serie" type="xs:int"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                             <xs:element name="certidao">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="cartorio" type="xs:string"></xs:element>
+                                                               <xs:element name="codigoTipo" type="xs:int"></xs:element>
+                                                               <xs:element name="folha" type="xs:int"></xs:element>
+                                                               <xs:element name="livro" type="xs:int"></xs:element>
+                                                               <xs:element name="termo" type="xs:int"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                             <xs:element name="tituloEleitoral">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="sessao" type="xs:int"></xs:element>
+                                                               <xs:element name="zona" type="xs:int"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="vinculos">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="idIdentificador" type="xs:int"></xs:element>
+                                             <xs:element name="relacionamento" type="xs:string"></xs:element>
+                                             <xs:element name="dataInicio" type="xs:int"></xs:element>
+                                             <xs:element name="dataFim" type="xs:int"></xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="enderecos">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="bairro" type="xs:string"></xs:element>
+                                             <xs:element name="caixaPostal" type="xs:int"></xs:element>
+                                             <xs:element name="cep" type="xs:string"></xs:element>
+                                             <xs:element name="codigoEstado" type="xs:string"></xs:element>
+                                             <xs:element name="codigoMunicipio" type="xs:int"></xs:element>
+                                             <xs:element name="codigoPais" type="xs:int"></xs:element>
+                                             <xs:element name="codigoTipo" type="xs:int"></xs:element>
+                                             <xs:element name="dataFim">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="data" type="xs:int"></xs:element>
+                                                               <xs:element name="acuracia" type="xs:string"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                             <xs:element name="dataInicio">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="data" type="xs:int"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                             <xs:element name="distrito" type="xs:string"></xs:element>
+                                             <xs:element name="id" type="xs:int"></xs:element>
+                                             <xs:element name="linhas" maxOccurs="unbounded">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="linha" type="xs:string"></xs:element>
+                                                               <xs:element name="ordem" type="xs:int"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="dadoDemografico">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="codigoNascimentoOrdem" type="xs:int"></xs:element>
+                                             <xs:element name="codigoNascimentoPluraridade" type="xs:int"></xs:element>
+                                             <xs:element name="codigoNascimentoSeguimento" type="xs:string"></xs:element>
+                                             <xs:element name="codigoObitoFonte" type="xs:int"></xs:element>
+                                             <xs:element name="codigoRaca" type="xs:int"></xs:element>
+                                             <xs:element name="codigoSexo" type="xs:int"></xs:element>
+                                             <xs:element name="codigoSituacaoFamiliar" type="xs:int"></xs:element>
+                                             <xs:element name="comentario" type="xs:string"></xs:element>
+                                             <xs:element name="mae" type="xs:string"></xs:element>
+                                             <xs:element name="nacionalidade">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="codigoMunicipio" type="xs:int"></xs:element>
+                                                               <xs:element name="codigoEstado" type="xs:string"></xs:element>
+                                                               <xs:element name="codigoPais" type="xs:int"></xs:element>
+                                                               <xs:element name="dataEntradaPais" type="xs:int"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                             <xs:element name="nascimento">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="data" type="xs:int"></xs:element>
+                                                               <xs:element name="acuracia" type="xs:string"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                             <xs:element name="obito">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="data" type="xs:int"></xs:element>
+                                                               <xs:element name="acuracia" type="xs:string"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                             <xs:element name="pai" type="xs:string"></xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="comunicacoes">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="codigoMeio" type="xs:int"></xs:element>
+                                             <xs:element name="codigoPreferencia" type="xs:string"></xs:element>
+                                             <xs:element name="codigoUso" type="xs:int"></xs:element>
+                                             <xs:element name="detalhe" type="xs:string"></xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                     </xs:sequence>
+               </xs:complexType>
+         </xs:element>
+   </xs:schema>
+ 

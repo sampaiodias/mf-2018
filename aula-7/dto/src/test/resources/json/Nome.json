@@ -1,0 +1,23 @@
+{
+  "id": 1234,
+  "titulos": "DR.",
+  "nomes": "JOAO",
+  "sobrenomes": "NINGUÉM",
+  "sufixos": "SR.",
+  "codigoPreferido": 1,
+  "codigoUsoCondicional": 3,
+  "utilizacoes": [
+    {
+      "idIdentificador": 1234,
+      "codigoUso": 1,
+      "dataInicial": "20181114",
+      "dataFinal": "20181114"
+    }
+  ],
+  "representacoes": [
+    {
+      "utilizacao": "A",
+      "alternativa": "JOÃO NINGUÉM"
+    }
+  ]
+}

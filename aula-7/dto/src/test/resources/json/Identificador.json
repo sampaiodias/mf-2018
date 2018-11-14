@@ -1,0 +1,16 @@
+{
+  "id": 1234,
+  "idIndividuo": 123,
+  "designacao": "DESIGNACAO",
+  "codigoArea": 12345,
+  "emissor": "EMISSOR",
+  "data": "20181114",
+  "codigoTipo": "TIPO",
+  "certidao": {
+    "cartorio": "A"
+  },
+  "tituloEleitoral": {
+    "zona": 2,
+    "sessao": 1
+  }
+}

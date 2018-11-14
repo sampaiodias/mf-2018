@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<individuo>
+    <id>1234</id>
+    <nomes>
+        <codigoPreferido>1</codigoPreferido>
+        <codigoUsoCondicional>3</codigoUsoCondicional>
+        <id>1234</id>
+        <nomes>JOAO</nomes>
+        <representacoes>
+            <alternativa>JOÃO NINGUÉM</alternativa>
+            <utilizacao>A</utilizacao>
+        </representacoes>
+        <sobrenomes>NINGUÉM</sobrenomes>
+        <sufixos>SR.</sufixos>
+        <titulos>DR.</titulos>
+        <utilizacoes>
+            <idIdentificador>1234</idIdentificador>
+            <codigoUso>1</codigoUso>
+            <dataInicial>20181114</dataInicial>
+            <dataFinal>20181114</dataFinal>
+        </utilizacoes>
+    </nomes>
+    <identificadores>
+        <id>1234</id>
+        <idIndividuo>1234</idIndividuo>
+        <designacao>SR</designacao>
+        <codigoArea>1</codigoArea>
+        <emissor>GOVERNO FEDERAL</emissor>
+        <data>20181114</data>
+        <codigoTipo>...</codigoTipo>
+        <ctps>
+            <codigoEstado>GO</codigoEstado>
+            <serie>1</serie>
+        </ctps>
+        <certidao>
+            <cartorio>CARTORIO TESTE</cartorio>
+            <codigoTipo>0</codigoTipo>
+            <folha>1</folha>
+            <livro>2</livro>
+            <termo>3</termo>
+        </certidao>
+        <tituloEleitoral>
+            <sessao>1</sessao>
+            <zona>1</zona>
+        </tituloEleitoral>
+    </identificadores>
+    <vinculos>
+        <idIdentificador>1234</idIdentificador>
+        <relacionamento>PAI</relacionamento>
+        <dataInicio>20181114</dataInicio>
+        <dataFim>20181114</dataFim>
+    </vinculos>
+    <enderecos>
+        <bairro>BAIRRO TESTE</bairro>
+        <caixaPostal>123</caixaPostal>
+        <cep>12345-678</cep>
+        <codigoEstado>GO</codigoEstado>
+        <codigoMunicipio>1234</codigoMunicipio>
+        <codigoPais>55</codigoPais>
+        <codigoTipo>1</codigoTipo>
+        <dataFim>
+            <data>20181114</data>
+            <acuracia>...</acuracia>
+        </dataFim>
+        <dataInicio>
+            <data>20181114</data>
+        </dataInicio>
+        <distrito>DISTRITO TESTE</distrito>
+        <id>1234</id>
+        <linhas>
+            <linha>RUA A</linha>
+            <ordem>0</ordem>
+        </linhas>
+        <linhas>
+            <linha>RUA B</linha>
+            <ordem>1</ordem>
+        </linhas>
+    </enderecos>
+    <dadoDemografico>
+        <codigoNascimentoOrdem>1</codigoNascimentoOrdem>
+        <codigoNascimentoPluraridade>1</codigoNascimentoPluraridade>
+        <codigoNascimentoSeguimento>A</codigoNascimentoSeguimento>
+        <codigoObitoFonte>1</codigoObitoFonte>
+        <codigoRaca>1</codigoRaca>
+        <codigoSexo>1</codigoSexo>
+        <codigoSituacaoFamiliar>1</codigoSituacaoFamiliar>
+        <comentario>Comentário...</comentario>
+        <mae>MARIA DA SILVA</mae>
+        <nacionalidade>
+            <codigoMunicipio>1234</codigoMunicipio>
+            <codigoEstado>GO</codigoEstado>
+            <codigoPais>55</codigoPais>
+            <dataEntradaPais>20181114</dataEntradaPais>
+        </nacionalidade>
+        <nascimento>
+            <data>20181114</data>
+            <acuracia>...</acuracia>
+        </nascimento>
+        <obito>
+            <data>20181114</data>
+            <acuracia>...</acuracia>
+        </obito>
+        <pai>JOÃO DA SILVA</pai>
+    </dadoDemografico>
+    <comunicacoes>
+        <codigoMeio>1</codigoMeio>
+        <codigoPreferencia>B</codigoPreferencia>
+        <codigoUso>2</codigoUso>
+        <detalhe>(11) 3000-0000</detalhe>
+    </comunicacoes>
+</individuo>

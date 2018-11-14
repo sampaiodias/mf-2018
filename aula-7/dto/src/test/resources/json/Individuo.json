@@ -1,0 +1,126 @@
+{
+  "id": 1234,
+  "nomes": [
+    {
+      "id": 1234,
+      "titulos": "DR.",
+      "nomes": "JOAO",
+      "sobrenomes": "NINGUÉM",
+      "sufixos": "SR.",
+      "codigoPreferido": 1,
+      "codigoUsoCondicional": 3,
+      "utilizacoes": [
+        {
+          "idIdentificador": 1234,
+          "codigoUso": 1,
+          "dataInicial": "20181114",
+          "dataFinal": "20181114"
+        }
+      ],
+      "representacoes": [
+        {
+          "utilizacao": "A",
+          "alternativa": "JOÃO NINGUÉM"
+        }
+      ]
+    }
+  ],
+  "identificadores": [
+    {
+      "id": 1234,
+      "idIndividuo": 1234,
+      "designacao": "SR",
+      "codigoArea": 1,
+      "emissor": "GOVERNO FEDERAL",
+      "data": "20181114",
+      "codigoTipo": "...",
+      "ctps": {
+        "serie": 1,
+        "codigoEstado": "GO"
+      },
+      "certidao": {
+        "codigoTipo": 0,
+        "cartorio": "CARTORIO TESTE",
+        "livro": 2,
+        "folha": 1,
+        "termo": 3
+      },
+      "tituloEleitoral": {
+        "zona": 1,
+        "sessao": 1
+      }
+    }
+  ],
+  "vinculos": [
+    {
+      "idIdentificador": 1234,
+      "relacionamento": "PAI",
+      "dataInicio": "20181114",
+      "dataFim": "20181114"
+    }
+  ],
+  "enderecos": [
+    {
+      "id": 1234,
+      "bairro": "BAIRRO TESTE",
+      "distrito": "DISTRITO TESTE",
+      "cep": "12345-678",
+      "caixaPostal": "123",
+      "codigoMunicipio": 1234,
+      "codigoEstado": "GO",
+      "codigoPais": 55,
+      "codigoTipo": 1,
+      "dataInicio": {
+        "data": "20181114"
+      },
+      "dataFim": {
+        "data": "20181114",
+        "acuracia": "..."
+      },
+      "linhas": [
+        {
+          "linha": "RUA A",
+          "ordem": 0
+        },
+        {
+          "linha": "RUA B",
+          "ordem": 1
+        }
+      ]
+    }
+  ],
+  "dadoDemografico": {
+    "codigoSexo": 1,
+    "codigoRaca": 1,
+    "nacionalidade": {
+      "codigoMunicipio": 1234,
+      "codigoEstado": "GO",
+      "codigoPais": 55,
+      "dataEntradaPais": "20181114"
+    },
+    "mae": "MARIA DA SILVA",
+    "pai": "JOÃO DA SILVA",
+    "codigoSituacaoFamiliar": 1,
+    "nascimento": {
+      "data": "20181114",
+      "acuracia": "..."
+    },
+    "codigoNascimentoPluraridade": 1,
+    "codigoNascimentoOrdem": 1,
+    "codigoNascimentoSeguimento": "A",
+    "obito": {
+      "data": "20181114",
+      "acuracia": "..."
+    },
+    "codigoObitoFonte": 1,
+    "comentario": "Comentário..."
+  },
+  "comunicacoes": [
+    {
+      "codigoMeio": 1,
+      "codigoPreferencia": "B",
+      "codigoUso": 2,
+      "detalhe": "(11) 3000-0000"
+    }
+  ]
+}
