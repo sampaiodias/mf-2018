@@ -1,31 +1,31 @@
- 1 {
- 2   "definitions": {},
- 3   "$schema": "http://json-schema.org/draft-07/schema#",
- 4   "$id": "http://example.com/root.json",
- 5   "type": "object",
- 6   "title": "The Root Schema",
- 7   "required": [
- 8     "zona",
- 9     "sessao"
-10   ],
-11   "properties": {
-12     "zona": {
-13       "$id": "#/properties/zona",
-14       "type": "integer",
-15       "title": "The Zona Schema",
-16       "default": 0,
-17       "examples": [
-18         2
-19       ]
-20     },
-21     "sessao": {
-22       "$id": "#/properties/sessao",
-23       "type": "integer",
-24       "title": "The Sessao Schema",
-25       "default": 0,
-26       "examples": [
-27         1
-28       ]
-29     }
-30   }
-31 }
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "zona",
+    "sessao"
+  ],
+  "properties": {
+    "zona": {
+      "$id": "#/properties/zona",
+      "type": "integer",
+      "title": "The Zona Schema",
+      "default": 0,
+      "examples": [
+        2
+      ]
+    },
+    "sessao": {
+      "$id": "#/properties/sessao",
+      "type": "integer",
+      "title": "The Sessao Schema",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    }
+  }
+}

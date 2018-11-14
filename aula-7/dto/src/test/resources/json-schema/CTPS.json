@@ -1,32 +1,32 @@
- 1 {
- 2   "definitions": {},
- 3   "$schema": "http://json-schema.org/draft-07/schema#",
- 4   "$id": "http://example.com/root.json",
- 5   "type": "object",
- 6   "title": "The Root Schema",
- 7   "required": [
- 8     "serie",
- 9     "codigoEstado"
-10   ],
-11   "properties": {
-12     "serie": {
-13       "$id": "#/properties/serie",
-14       "type": "integer",
-15       "title": "The Serie Schema",
-16       "default": 0,
-17       "examples": [
-18         111
-19       ]
-20     },
-21     "codigoEstado": {
-22       "$id": "#/properties/codigoEstado",
-23       "type": "string",
-24       "title": "The Codigoestado Schema",
-25       "default": "",
-26       "examples": [
-27         "GO"
-28       ],
-29       "pattern": "^(.*)$"
-30     }
-31   }
-32 }
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "serie",
+    "codigoEstado"
+  ],
+  "properties": {
+    "serie": {
+      "$id": "#/properties/serie",
+      "type": "integer",
+      "title": "The Serie Schema",
+      "default": 0,
+      "examples": [
+        111
+      ]
+    },
+    "codigoEstado": {
+      "$id": "#/properties/codigoEstado",
+      "type": "string",
+      "title": "The Codigoestado Schema",
+      "default": "",
+      "examples": [
+        "GO"
+      ],
+      "pattern": "^(.*)$"
+    }
+  }
+}

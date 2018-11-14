@@ -1,53 +1,53 @@
- 1 {
- 2   "definitions": {},
- 3   "$schema": "http://json-schema.org/draft-07/schema#",
- 4   "$id": "http://example.com/root.json",
- 5   "type": "object",
- 6   "title": "The Root Schema",
- 7   "required": [
- 8     "codigoMunicipio",
- 9     "codigoEstado",
-10     "codigoPais",
-11     "dataEntradaPais"
-12   ],
-13   "properties": {
-14     "codigoMunicipio": {
-15       "$id": "#/properties/codigoMunicipio",
-16       "type": "integer",
-17       "title": "The Codigomunicipio Schema",
-18       "default": 0,
-19       "examples": [
-20         1234
-21       ]
-22     },
-23     "codigoEstado": {
-24       "$id": "#/properties/codigoEstado",
-25       "type": "string",
-26       "title": "The Codigoestado Schema",
-27       "default": "",
-28       "examples": [
-29         "GO"
-30       ],
-31       "pattern": "^(.*)$"
-32     },
-33     "codigoPais": {
-34       "$id": "#/properties/codigoPais",
-35       "type": "integer",
-36       "title": "The Codigopais Schema",
-37       "default": 0,
-38       "examples": [
-39         55
-40       ]
-41     },
-42     "dataEntradaPais": {
-43       "$id": "#/properties/dataEntradaPais",
-44       "type": "string",
-45       "title": "The Dataentradapais Schema",
-46       "default": "",
-47       "examples": [
-48         "20181114"
-49       ],
-50       "pattern": "^(.*)$"
-51     }
-52   }
-53 }
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "codigoMunicipio",
+    "codigoEstado",
+    "codigoPais",
+    "dataEntradaPais"
+  ],
+  "properties": {
+    "codigoMunicipio": {
+      "$id": "#/properties/codigoMunicipio",
+      "type": "integer",
+      "title": "The Codigomunicipio Schema",
+      "default": 0,
+      "examples": [
+        1234
+      ]
+    },
+    "codigoEstado": {
+      "$id": "#/properties/codigoEstado",
+      "type": "string",
+      "title": "The Codigoestado Schema",
+      "default": "",
+      "examples": [
+        "GO"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "codigoPais": {
+      "$id": "#/properties/codigoPais",
+      "type": "integer",
+      "title": "The Codigopais Schema",
+      "default": 0,
+      "examples": [
+        55
+      ]
+    },
+    "dataEntradaPais": {
+      "$id": "#/properties/dataEntradaPais",
+      "type": "string",
+      "title": "The Dataentradapais Schema",
+      "default": "",
+      "examples": [
+        "20181114"
+      ],
+      "pattern": "^(.*)$"
+    }
+  }
+}

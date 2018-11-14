@@ -1,959 +1,959 @@
-  1 {
-  2   "definitions": {},
-  3   "$schema": "http://json-schema.org/draft-07/schema#",
-  4   "$id": "http://example.com/root.json",
-  5   "type": "object",
-  6   "title": "The Root Schema",
-  7   "required": [
-  8     "id",
-  9     "nomes",
- 10     "identificadores",
- 11     "vinculos",
- 12     "enderecos",
- 13     "dadoDemografico",
- 14     "comunicacoes"
- 15   ],
- 16   "properties": {
- 17     "id": {
- 18       "$id": "#/properties/id",
- 19       "type": "integer",
- 20       "title": "The Id Schema",
- 21       "default": 0,
- 22       "examples": [
- 23         1234
- 24       ]
- 25     },
- 26     "nomes": {
- 27       "$id": "#/properties/nomes",
- 28       "type": "array",
- 29       "title": "The Nomes Schema",
- 30       "items": {
- 31         "$id": "#/properties/nomes/items",
- 32         "type": "object",
- 33         "title": "The Items Schema",
- 34         "required": [
- 35           "id",
- 36           "titulos",
- 37           "nomes",
- 38           "sobrenomes",
- 39           "sufixos",
- 40           "codigoPreferido",
- 41           "codigoUsoCondicional",
- 42           "utilizacoes",
- 43           "representacoes"
- 44         ],
- 45         "properties": {
- 46           "id": {
- 47             "$id": "#/properties/nomes/items/properties/id",
- 48             "type": "integer",
- 49             "title": "The Id Schema",
- 50             "default": 0,
- 51             "examples": [
- 52               1234
- 53             ]
- 54           },
- 55           "titulos": {
- 56             "$id": "#/properties/nomes/items/properties/titulos",
- 57             "type": "string",
- 58             "title": "The Titulos Schema",
- 59             "default": "",
- 60             "examples": [
- 61               "DR."
- 62             ],
- 63             "pattern": "^(.*)$"
- 64           },
- 65           "nomes": {
- 66             "$id": "#/properties/nomes/items/properties/nomes",
- 67             "type": "string",
- 68             "title": "The Nomes Schema",
- 69             "default": "",
- 70             "examples": [
- 71               "JOAO"
- 72             ],
- 73             "pattern": "^(.*)$"
- 74           },
- 75           "sobrenomes": {
- 76             "$id": "#/properties/nomes/items/properties/sobrenomes",
- 77             "type": "string",
- 78             "title": "The Sobrenomes Schema",
- 79             "default": "",
- 80             "examples": [
- 81               "NINGUÉM"
- 82             ],
- 83             "pattern": "^(.*)$"
- 84           },
- 85           "sufixos": {
- 86             "$id": "#/properties/nomes/items/properties/sufixos",
- 87             "type": "string",
- 88             "title": "The Sufixos Schema",
- 89             "default": "",
- 90             "examples": [
- 91               "SR."
- 92             ],
- 93             "pattern": "^(.*)$"
- 94           },
- 95           "codigoPreferido": {
- 96             "$id": "#/properties/nomes/items/properties/codigoPreferido",
- 97             "type": "integer",
- 98             "title": "The Codigopreferido Schema",
- 99             "default": 0,
-100             "examples": [
-101               1
-102             ]
-103           },
-104           "codigoUsoCondicional": {
-105             "$id": "#/properties/nomes/items/properties/codigoUsoCondicional",
-106             "type": "integer",
-107             "title": "The Codigousocondicional Schema",
-108             "default": 0,
-109             "examples": [
-110               3
-111             ]
-112           },
-113           "utilizacoes": {
-114             "$id": "#/properties/nomes/items/properties/utilizacoes",
-115             "type": "array",
-116             "title": "The Utilizacoes Schema",
-117             "items": {
-118               "$id": "#/properties/nomes/items/properties/utilizacoes/items",
-119               "type": "object",
-120               "title": "The Items Schema",
-121               "required": [
-122                 "idIdentificador",
-123                 "codigoUso",
-124                 "dataInicial",
-125                 "dataFinal"
-126               ],
-127               "properties": {
-128                 "idIdentificador": {
-129                   "$id": "#/properties/nomes/items/properties/utilizacoes/items/properties/idIdentificador",
-130                   "type": "integer",
-131                   "title": "The Ididentificador Schema",
-132                   "default": 0,
-133                   "examples": [
-134                     1234
-135                   ]
-136                 },
-137                 "codigoUso": {
-138                   "$id": "#/properties/nomes/items/properties/utilizacoes/items/properties/codigoUso",
-139                   "type": "integer",
-140                   "title": "The Codigouso Schema",
-141                   "default": 0,
-142                   "examples": [
-143                     1
-144                   ]
-145                 },
-146                 "dataInicial": {
-147                   "$id": "#/properties/nomes/items/properties/utilizacoes/items/properties/dataInicial",
-148                   "type": "string",
-149                   "title": "The Datainicial Schema",
-150                   "default": "",
-151                   "examples": [
-152                     "20181114"
-153                   ],
-154                   "pattern": "^(.*)$"
-155                 },
-156                 "dataFinal": {
-157                   "$id": "#/properties/nomes/items/properties/utilizacoes/items/properties/dataFinal",
-158                   "type": "string",
-159                   "title": "The Datafinal Schema",
-160                   "default": "",
-161                   "examples": [
-162                     "20181114"
-163                   ],
-164                   "pattern": "^(.*)$"
-165                 }
-166               }
-167             }
-168           },
-169           "representacoes": {
-170             "$id": "#/properties/nomes/items/properties/representacoes",
-171             "type": "array",
-172             "title": "The Representacoes Schema",
-173             "items": {
-174               "$id": "#/properties/nomes/items/properties/representacoes/items",
-175               "type": "object",
-176               "title": "The Items Schema",
-177               "required": [
-178                 "utilizacao",
-179                 "alternativa"
-180               ],
-181               "properties": {
-182                 "utilizacao": {
-183                   "$id": "#/properties/nomes/items/properties/representacoes/items/properties/utilizacao",
-184                   "type": "string",
-185                   "title": "The Utilizacao Schema",
-186                   "default": "",
-187                   "examples": [
-188                     "A"
-189                   ],
-190                   "pattern": "^(.*)$"
-191                 },
-192                 "alternativa": {
-193                   "$id": "#/properties/nomes/items/properties/representacoes/items/properties/alternativa",
-194                   "type": "string",
-195                   "title": "The Alternativa Schema",
-196                   "default": "",
-197                   "examples": [
-198                     "JOÃO NINGUÉM"
-199                   ],
-200                   "pattern": "^(.*)$"
-201                 }
-202               }
-203             }
-204           }
-205         }
-206       }
-207     },
-208     "identificadores": {
-209       "$id": "#/properties/identificadores",
-210       "type": "array",
-211       "title": "The Identificadores Schema",
-212       "items": {
-213         "$id": "#/properties/identificadores/items",
-214         "type": "object",
-215         "title": "The Items Schema",
-216         "required": [
-217           "id",
-218           "idIndividuo",
-219           "designacao",
-220           "codigoArea",
-221           "emissor",
-222           "data",
-223           "codigoTipo",
-224           "ctps",
-225           "certidao",
-226           "tituloEleitoral"
-227         ],
-228         "properties": {
-229           "id": {
-230             "$id": "#/properties/identificadores/items/properties/id",
-231             "type": "integer",
-232             "title": "The Id Schema",
-233             "default": 0,
-234             "examples": [
-235               1234
-236             ]
-237           },
-238           "idIndividuo": {
-239             "$id": "#/properties/identificadores/items/properties/idIndividuo",
-240             "type": "integer",
-241             "title": "The Idindividuo Schema",
-242             "default": 0,
-243             "examples": [
-244               1234
-245             ]
-246           },
-247           "designacao": {
-248             "$id": "#/properties/identificadores/items/properties/designacao",
-249             "type": "string",
-250             "title": "The Designacao Schema",
-251             "default": "",
-252             "examples": [
-253               "SR"
-254             ],
-255             "pattern": "^(.*)$"
-256           },
-257           "codigoArea": {
-258             "$id": "#/properties/identificadores/items/properties/codigoArea",
-259             "type": "integer",
-260             "title": "The Codigoarea Schema",
-261             "default": 0,
-262             "examples": [
-263               1
-264             ]
-265           },
-266           "emissor": {
-267             "$id": "#/properties/identificadores/items/properties/emissor",
-268             "type": "string",
-269             "title": "The Emissor Schema",
-270             "default": "",
-271             "examples": [
-272               "GOVERNO FEDERAL"
-273             ],
-274             "pattern": "^(.*)$"
-275           },
-276           "data": {
-277             "$id": "#/properties/identificadores/items/properties/data",
-278             "type": "string",
-279             "title": "The Data Schema",
-280             "default": "",
-281             "examples": [
-282               "20181114"
-283             ],
-284             "pattern": "^(.*)$"
-285           },
-286           "codigoTipo": {
-287             "$id": "#/properties/identificadores/items/properties/codigoTipo",
-288             "type": "string",
-289             "title": "The Codigotipo Schema",
-290             "default": "",
-291             "examples": [
-292               "..."
-293             ],
-294             "pattern": "^(.*)$"
-295           },
-296           "ctps": {
-297             "$id": "#/properties/identificadores/items/properties/ctps",
-298             "type": "object",
-299             "title": "The Ctps Schema",
-300             "required": [
-301               "serie",
-302               "codigoEstado"
-303             ],
-304             "properties": {
-305               "serie": {
-306                 "$id": "#/properties/identificadores/items/properties/ctps/properties/serie",
-307                 "type": "integer",
-308                 "title": "The Serie Schema",
-309                 "default": 0,
-310                 "examples": [
-311                   1
-312                 ]
-313               },
-314               "codigoEstado": {
-315                 "$id": "#/properties/identificadores/items/properties/ctps/properties/codigoEstado",
-316                 "type": "string",
-317                 "title": "The Codigoestado Schema",
-318                 "default": "",
-319                 "examples": [
-320                   "GO"
-321                 ],
-322                 "pattern": "^(.*)$"
-323               }
-324             }
-325           },
-326           "certidao": {
-327             "$id": "#/properties/identificadores/items/properties/certidao",
-328             "type": "object",
-329             "title": "The Certidao Schema",
-330             "required": [
-331               "codigoTipo",
-332               "cartorio",
-333               "livro",
-334               "folha",
-335               "termo"
-336             ],
-337             "properties": {
-338               "codigoTipo": {
-339                 "$id": "#/properties/identificadores/items/properties/certidao/properties/codigoTipo",
-340                 "type": "integer",
-341                 "title": "The Codigotipo Schema",
-342                 "default": 0,
-343                 "examples": [
-344                   0
-345                 ]
-346               },
-347               "cartorio": {
-348                 "$id": "#/properties/identificadores/items/properties/certidao/properties/cartorio",
-349                 "type": "string",
-350                 "title": "The Cartorio Schema",
-351                 "default": "",
-352                 "examples": [
-353                   "CARTORIO TESTE"
-354                 ],
-355                 "pattern": "^(.*)$"
-356               },
-357               "livro": {
-358                 "$id": "#/properties/identificadores/items/properties/certidao/properties/livro",
-359                 "type": "integer",
-360                 "title": "The Livro Schema",
-361                 "default": 0,
-362                 "examples": [
-363                   2
-364                 ]
-365               },
-366               "folha": {
-367                 "$id": "#/properties/identificadores/items/properties/certidao/properties/folha",
-368                 "type": "integer",
-369                 "title": "The Folha Schema",
-370                 "default": 0,
-371                 "examples": [
-372                   1
-373                 ]
-374               },
-375               "termo": {
-376                 "$id": "#/properties/identificadores/items/properties/certidao/properties/termo",
-377                 "type": "integer",
-378                 "title": "The Termo Schema",
-379                 "default": 0,
-380                 "examples": [
-381                   3
-382                 ]
-383               }
-384             }
-385           },
-386           "tituloEleitoral": {
-387             "$id": "#/properties/identificadores/items/properties/tituloEleitoral",
-388             "type": "object",
-389             "title": "The Tituloeleitoral Schema",
-390             "required": [
-391               "zona",
-392               "sessao"
-393             ],
-394             "properties": {
-395               "zona": {
-396                 "$id": "#/properties/identificadores/items/properties/tituloEleitoral/properties/zona",
-397                 "type": "integer",
-398                 "title": "The Zona Schema",
-399                 "default": 0,
-400                 "examples": [
-401                   1
-402                 ]
-403               },
-404               "sessao": {
-405                 "$id": "#/properties/identificadores/items/properties/tituloEleitoral/properties/sessao",
-406                 "type": "integer",
-407                 "title": "The Sessao Schema",
-408                 "default": 0,
-409                 "examples": [
-410                   1
-411                 ]
-412               }
-413             }
-414           }
-415         }
-416       }
-417     },
-418     "vinculos": {
-419       "$id": "#/properties/vinculos",
-420       "type": "array",
-421       "title": "The Vinculos Schema",
-422       "items": {
-423         "$id": "#/properties/vinculos/items",
-424         "type": "object",
-425         "title": "The Items Schema",
-426         "required": [
-427           "idIdentificador",
-428           "relacionamento",
-429           "dataInicio",
-430           "dataFim"
-431         ],
-432         "properties": {
-433           "idIdentificador": {
-434             "$id": "#/properties/vinculos/items/properties/idIdentificador",
-435             "type": "integer",
-436             "title": "The Ididentificador Schema",
-437             "default": 0,
-438             "examples": [
-439               1234
-440             ]
-441           },
-442           "relacionamento": {
-443             "$id": "#/properties/vinculos/items/properties/relacionamento",
-444             "type": "string",
-445             "title": "The Relacionamento Schema",
-446             "default": "",
-447             "examples": [
-448               "PAI"
-449             ],
-450             "pattern": "^(.*)$"
-451           },
-452           "dataInicio": {
-453             "$id": "#/properties/vinculos/items/properties/dataInicio",
-454             "type": "string",
-455             "title": "The Datainicio Schema",
-456             "default": "",
-457             "examples": [
-458               "20181114"
-459             ],
-460             "pattern": "^(.*)$"
-461           },
-462           "dataFim": {
-463             "$id": "#/properties/vinculos/items/properties/dataFim",
-464             "type": "string",
-465             "title": "The Datafim Schema",
-466             "default": "",
-467             "examples": [
-468               "20181114"
-469             ],
-470             "pattern": "^(.*)$"
-471           }
-472         }
-473       }
-474     },
-475     "enderecos": {
-476       "$id": "#/properties/enderecos",
-477       "type": "array",
-478       "title": "The Enderecos Schema",
-479       "items": {
-480         "$id": "#/properties/enderecos/items",
-481         "type": "object",
-482         "title": "The Items Schema",
-483         "required": [
-484           "id",
-485           "bairro",
-486           "distrito",
-487           "cep",
-488           "caixaPostal",
-489           "codigoMunicipio",
-490           "codigoEstado",
-491           "codigoPais",
-492           "codigoTipo",
-493           "dataInicio",
-494           "dataFim",
-495           "linhas"
-496         ],
-497         "properties": {
-498           "id": {
-499             "$id": "#/properties/enderecos/items/properties/id",
-500             "type": "integer",
-501             "title": "The Id Schema",
-502             "default": 0,
-503             "examples": [
-504               1234
-505             ]
-506           },
-507           "bairro": {
-508             "$id": "#/properties/enderecos/items/properties/bairro",
-509             "type": "string",
-510             "title": "The Bairro Schema",
-511             "default": "",
-512             "examples": [
-513               "BAIRRO TESTE"
-514             ],
-515             "pattern": "^(.*)$"
-516           },
-517           "distrito": {
-518             "$id": "#/properties/enderecos/items/properties/distrito",
-519             "type": "string",
-520             "title": "The Distrito Schema",
-521             "default": "",
-522             "examples": [
-523               "DISTRITO TESTE"
-524             ],
-525             "pattern": "^(.*)$"
-526           },
-527           "cep": {
-528             "$id": "#/properties/enderecos/items/properties/cep",
-529             "type": "string",
-530             "title": "The Cep Schema",
-531             "default": "",
-532             "examples": [
-533               "12345-678"
-534             ],
-535             "pattern": "^(.*)$"
-536           },
-537           "caixaPostal": {
-538             "$id": "#/properties/enderecos/items/properties/caixaPostal",
-539             "type": "string",
-540             "title": "The Caixapostal Schema",
-541             "default": "",
-542             "examples": [
-543               "123"
-544             ],
-545             "pattern": "^(.*)$"
-546           },
-547           "codigoMunicipio": {
-548             "$id": "#/properties/enderecos/items/properties/codigoMunicipio",
-549             "type": "integer",
-550             "title": "The Codigomunicipio Schema",
-551             "default": 0,
-552             "examples": [
-553               1234
-554             ]
-555           },
-556           "codigoEstado": {
-557             "$id": "#/properties/enderecos/items/properties/codigoEstado",
-558             "type": "string",
-559             "title": "The Codigoestado Schema",
-560             "default": "",
-561             "examples": [
-562               "GO"
-563             ],
-564             "pattern": "^(.*)$"
-565           },
-566           "codigoPais": {
-567             "$id": "#/properties/enderecos/items/properties/codigoPais",
-568             "type": "integer",
-569             "title": "The Codigopais Schema",
-570             "default": 0,
-571             "examples": [
-572               55
-573             ]
-574           },
-575           "codigoTipo": {
-576             "$id": "#/properties/enderecos/items/properties/codigoTipo",
-577             "type": "integer",
-578             "title": "The Codigotipo Schema",
-579             "default": 0,
-580             "examples": [
-581               1
-582             ]
-583           },
-584           "dataInicio": {
-585             "$id": "#/properties/enderecos/items/properties/dataInicio",
-586             "type": "object",
-587             "title": "The Datainicio Schema",
-588             "required": [
-589               "data"
-590             ],
-591             "properties": {
-592               "data": {
-593                 "$id": "#/properties/enderecos/items/properties/dataInicio/properties/data",
-594                 "type": "string",
-595                 "title": "The Data Schema",
-596                 "default": "",
-597                 "examples": [
-598                   "20181114"
-599                 ],
-600                 "pattern": "^(.*)$"
-601               }
-602             }
-603           },
-604           "dataFim": {
-605             "$id": "#/properties/enderecos/items/properties/dataFim",
-606             "type": "object",
-607             "title": "The Datafim Schema",
-608             "required": [
-609               "data",
-610               "acuracia"
-611             ],
-612             "properties": {
-613               "data": {
-614                 "$id": "#/properties/enderecos/items/properties/dataFim/properties/data",
-615                 "type": "string",
-616                 "title": "The Data Schema",
-617                 "default": "",
-618                 "examples": [
-619                   "20181114"
-620                 ],
-621                 "pattern": "^(.*)$"
-622               },
-623               "acuracia": {
-624                 "$id": "#/properties/enderecos/items/properties/dataFim/properties/acuracia",
-625                 "type": "string",
-626                 "title": "The Acuracia Schema",
-627                 "default": "",
-628                 "examples": [
-629                   "..."
-630                 ],
-631                 "pattern": "^(.*)$"
-632               }
-633             }
-634           },
-635           "linhas": {
-636             "$id": "#/properties/enderecos/items/properties/linhas",
-637             "type": "array",
-638             "title": "The Linhas Schema",
-639             "items": {
-640               "$id": "#/properties/enderecos/items/properties/linhas/items",
-641               "type": "object",
-642               "title": "The Items Schema",
-643               "required": [
-644                 "linha",
-645                 "ordem"
-646               ],
-647               "properties": {
-648                 "linha": {
-649                   "$id": "#/properties/enderecos/items/properties/linhas/items/properties/linha",
-650                   "type": "string",
-651                   "title": "The Linha Schema",
-652                   "default": "",
-653                   "examples": [
-654                     "RUA A"
-655                   ],
-656                   "pattern": "^(.*)$"
-657                 },
-658                 "ordem": {
-659                   "$id": "#/properties/enderecos/items/properties/linhas/items/properties/ordem",
-660                   "type": "integer",
-661                   "title": "The Ordem Schema",
-662                   "default": 0,
-663                   "examples": [
-664                     0
-665                   ]
-666                 }
-667               }
-668             }
-669           }
-670         }
-671       }
-672     },
-673     "dadoDemografico": {
-674       "$id": "#/properties/dadoDemografico",
-675       "type": "object",
-676       "title": "The Dadodemografico Schema",
-677       "required": [
-678         "codigoSexo",
-679         "codigoRaca",
-680         "nacionalidade",
-681         "mae",
-682         "pai",
-683         "codigoSituacaoFamiliar",
-684         "nascimento",
-685         "codigoNascimentoPluraridade",
-686         "codigoNascimentoOrdem",
-687         "codigoNascimentoSeguimento",
-688         "obito",
-689         "codigoObitoFonte",
-690         "comentario"
-691       ],
-692       "properties": {
-693         "codigoSexo": {
-694           "$id": "#/properties/dadoDemografico/properties/codigoSexo",
-695           "type": "integer",
-696           "title": "The Codigosexo Schema",
-697           "default": 0,
-698           "examples": [
-699             1
-700           ]
-701         },
-702         "codigoRaca": {
-703           "$id": "#/properties/dadoDemografico/properties/codigoRaca",
-704           "type": "integer",
-705           "title": "The Codigoraca Schema",
-706           "default": 0,
-707           "examples": [
-708             1
-709           ]
-710         },
-711         "nacionalidade": {
-712           "$id": "#/properties/dadoDemografico/properties/nacionalidade",
-713           "type": "object",
-714           "title": "The Nacionalidade Schema",
-715           "required": [
-716             "codigoMunicipio",
-717             "codigoEstado",
-718             "codigoPais",
-719             "dataEntradaPais"
-720           ],
-721           "properties": {
-722             "codigoMunicipio": {
-723               "$id": "#/properties/dadoDemografico/properties/nacionalidade/properties/codigoMunicipio",
-724               "type": "integer",
-725               "title": "The Codigomunicipio Schema",
-726               "default": 0,
-727               "examples": [
-728                 1234
-729               ]
-730             },
-731             "codigoEstado": {
-732               "$id": "#/properties/dadoDemografico/properties/nacionalidade/properties/codigoEstado",
-733               "type": "string",
-734               "title": "The Codigoestado Schema",
-735               "default": "",
-736               "examples": [
-737                 "GO"
-738               ],
-739               "pattern": "^(.*)$"
-740             },
-741             "codigoPais": {
-742               "$id": "#/properties/dadoDemografico/properties/nacionalidade/properties/codigoPais",
-743               "type": "integer",
-744               "title": "The Codigopais Schema",
-745               "default": 0,
-746               "examples": [
-747                 55
-748               ]
-749             },
-750             "dataEntradaPais": {
-751               "$id": "#/properties/dadoDemografico/properties/nacionalidade/properties/dataEntradaPais",
-752               "type": "string",
-753               "title": "The Dataentradapais Schema",
-754               "default": "",
-755               "examples": [
-756                 "20181114"
-757               ],
-758               "pattern": "^(.*)$"
-759             }
-760           }
-761         },
-762         "mae": {
-763           "$id": "#/properties/dadoDemografico/properties/mae",
-764           "type": "string",
-765           "title": "The Mae Schema",
-766           "default": "",
-767           "examples": [
-768             "MARIA DA SILVA"
-769           ],
-770           "pattern": "^(.*)$"
-771         },
-772         "pai": {
-773           "$id": "#/properties/dadoDemografico/properties/pai",
-774           "type": "string",
-775           "title": "The Pai Schema",
-776           "default": "",
-777           "examples": [
-778             "JOÃO DA SILVA"
-779           ],
-780           "pattern": "^(.*)$"
-781         },
-782         "codigoSituacaoFamiliar": {
-783           "$id": "#/properties/dadoDemografico/properties/codigoSituacaoFamiliar",
-784           "type": "integer",
-785           "title": "The Codigosituacaofamiliar Schema",
-786           "default": 0,
-787           "examples": [
-788             1
-789           ]
-790         },
-791         "nascimento": {
-792           "$id": "#/properties/dadoDemografico/properties/nascimento",
-793           "type": "object",
-794           "title": "The Nascimento Schema",
-795           "required": [
-796             "data",
-797             "acuracia"
-798           ],
-799           "properties": {
-800             "data": {
-801               "$id": "#/properties/dadoDemografico/properties/nascimento/properties/data",
-802               "type": "string",
-803               "title": "The Data Schema",
-804               "default": "",
-805               "examples": [
-806                 "20181114"
-807               ],
-808               "pattern": "^(.*)$"
-809             },
-810             "acuracia": {
-811               "$id": "#/properties/dadoDemografico/properties/nascimento/properties/acuracia",
-812               "type": "string",
-813               "title": "The Acuracia Schema",
-814               "default": "",
-815               "examples": [
-816                 "..."
-817               ],
-818               "pattern": "^(.*)$"
-819             }
-820           }
-821         },
-822         "codigoNascimentoPluraridade": {
-823           "$id": "#/properties/dadoDemografico/properties/codigoNascimentoPluraridade",
-824           "type": "integer",
-825           "title": "The Codigonascimentopluraridade Schema",
-826           "default": 0,
-827           "examples": [
-828             1
-829           ]
-830         },
-831         "codigoNascimentoOrdem": {
-832           "$id": "#/properties/dadoDemografico/properties/codigoNascimentoOrdem",
-833           "type": "integer",
-834           "title": "The Codigonascimentoordem Schema",
-835           "default": 0,
-836           "examples": [
-837             1
-838           ]
-839         },
-840         "codigoNascimentoSeguimento": {
-841           "$id": "#/properties/dadoDemografico/properties/codigoNascimentoSeguimento",
-842           "type": "string",
-843           "title": "The Codigonascimentoseguimento Schema",
-844           "default": "",
-845           "examples": [
-846             "A"
-847           ],
-848           "pattern": "^(.*)$"
-849         },
-850         "obito": {
-851           "$id": "#/properties/dadoDemografico/properties/obito",
-852           "type": "object",
-853           "title": "The Obito Schema",
-854           "required": [
-855             "data",
-856             "acuracia"
-857           ],
-858           "properties": {
-859             "data": {
-860               "$id": "#/properties/dadoDemografico/properties/obito/properties/data",
-861               "type": "string",
-862               "title": "The Data Schema",
-863               "default": "",
-864               "examples": [
-865                 "20181114"
-866               ],
-867               "pattern": "^(.*)$"
-868             },
-869             "acuracia": {
-870               "$id": "#/properties/dadoDemografico/properties/obito/properties/acuracia",
-871               "type": "string",
-872               "title": "The Acuracia Schema",
-873               "default": "",
-874               "examples": [
-875                 "..."
-876               ],
-877               "pattern": "^(.*)$"
-878             }
-879           }
-880         },
-881         "codigoObitoFonte": {
-882           "$id": "#/properties/dadoDemografico/properties/codigoObitoFonte",
-883           "type": "integer",
-884           "title": "The Codigoobitofonte Schema",
-885           "default": 0,
-886           "examples": [
-887             1
-888           ]
-889         },
-890         "comentario": {
-891           "$id": "#/properties/dadoDemografico/properties/comentario",
-892           "type": "string",
-893           "title": "The Comentario Schema",
-894           "default": "",
-895           "examples": [
-896             "Comentário..."
-897           ],
-898           "pattern": "^(.*)$"
-899         }
-900       }
-901     },
-902     "comunicacoes": {
-903       "$id": "#/properties/comunicacoes",
-904       "type": "array",
-905       "title": "The Comunicacoes Schema",
-906       "items": {
-907         "$id": "#/properties/comunicacoes/items",
-908         "type": "object",
-909         "title": "The Items Schema",
-910         "required": [
-911           "codigoMeio",
-912           "codigoPreferencia",
-913           "codigoUso",
-914           "detalhe"
-915         ],
-916         "properties": {
-917           "codigoMeio": {
-918             "$id": "#/properties/comunicacoes/items/properties/codigoMeio",
-919             "type": "integer",
-920             "title": "The Codigomeio Schema",
-921             "default": 0,
-922             "examples": [
-923               1
-924             ]
-925           },
-926           "codigoPreferencia": {
-927             "$id": "#/properties/comunicacoes/items/properties/codigoPreferencia",
-928             "type": "string",
-929             "title": "The Codigopreferencia Schema",
-930             "default": "",
-931             "examples": [
-932               "B"
-933             ],
-934             "pattern": "^(.*)$"
-935           },
-936           "codigoUso": {
-937             "$id": "#/properties/comunicacoes/items/properties/codigoUso",
-938             "type": "integer",
-939             "title": "The Codigouso Schema",
-940             "default": 0,
-941             "examples": [
-942               2
-943             ]
-944           },
-945           "detalhe": {
-946             "$id": "#/properties/comunicacoes/items/properties/detalhe",
-947             "type": "string",
-948             "title": "The Detalhe Schema",
-949             "default": "",
-950             "examples": [
-951               "(11) 3000-0000"
-952             ],
-953             "pattern": "^(.*)$"
-954           }
-955         }
-956       }
-957     }
-958   }
-959 }
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "id",
+    "nomes",
+    "identificadores",
+    "vinculos",
+    "enderecos",
+    "dadoDemografico",
+    "comunicacoes"
+  ],
+  "properties": {
+    "id": {
+      "$id": "#/properties/id",
+      "type": "integer",
+      "title": "The Id Schema",
+      "default": 0,
+      "examples": [
+        1234
+      ]
+    },
+    "nomes": {
+      "$id": "#/properties/nomes",
+      "type": "array",
+      "title": "The Nomes Schema",
+      "items": {
+        "$id": "#/properties/nomes/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "id",
+          "titulos",
+          "nomes",
+          "sobrenomes",
+          "sufixos",
+          "codigoPreferido",
+          "codigoUsoCondicional",
+          "utilizacoes",
+          "representacoes"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/properties/nomes/items/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "default": 0,
+            "examples": [
+              1234
+            ]
+          },
+          "titulos": {
+            "$id": "#/properties/nomes/items/properties/titulos",
+            "type": "string",
+            "title": "The Titulos Schema",
+            "default": "",
+            "examples": [
+              "DR."
+            ],
+            "pattern": "^(.*)$"
+          },
+          "nomes": {
+            "$id": "#/properties/nomes/items/properties/nomes",
+            "type": "string",
+            "title": "The Nomes Schema",
+            "default": "",
+            "examples": [
+              "JOAO"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "sobrenomes": {
+            "$id": "#/properties/nomes/items/properties/sobrenomes",
+            "type": "string",
+            "title": "The Sobrenomes Schema",
+            "default": "",
+            "examples": [
+              "NINGUÉM"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "sufixos": {
+            "$id": "#/properties/nomes/items/properties/sufixos",
+            "type": "string",
+            "title": "The Sufixos Schema",
+            "default": "",
+            "examples": [
+              "SR."
+            ],
+            "pattern": "^(.*)$"
+          },
+          "codigoPreferido": {
+            "$id": "#/properties/nomes/items/properties/codigoPreferido",
+            "type": "integer",
+            "title": "The Codigopreferido Schema",
+            "default": 0,
+            "examples": [
+              1
+            ]
+          },
+          "codigoUsoCondicional": {
+            "$id": "#/properties/nomes/items/properties/codigoUsoCondicional",
+            "type": "integer",
+            "title": "The Codigousocondicional Schema",
+            "default": 0,
+            "examples": [
+              3
+            ]
+          },
+          "utilizacoes": {
+            "$id": "#/properties/nomes/items/properties/utilizacoes",
+            "type": "array",
+            "title": "The Utilizacoes Schema",
+            "items": {
+              "$id": "#/properties/nomes/items/properties/utilizacoes/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "idIdentificador",
+                "codigoUso",
+                "dataInicial",
+                "dataFinal"
+              ],
+              "properties": {
+                "idIdentificador": {
+                  "$id": "#/properties/nomes/items/properties/utilizacoes/items/properties/idIdentificador",
+                  "type": "integer",
+                  "title": "The Ididentificador Schema",
+                  "default": 0,
+                  "examples": [
+                    1234
+                  ]
+                },
+                "codigoUso": {
+                  "$id": "#/properties/nomes/items/properties/utilizacoes/items/properties/codigoUso",
+                  "type": "integer",
+                  "title": "The Codigouso Schema",
+                  "default": 0,
+                  "examples": [
+                    1
+                  ]
+                },
+                "dataInicial": {
+                  "$id": "#/properties/nomes/items/properties/utilizacoes/items/properties/dataInicial",
+                  "type": "string",
+                  "title": "The Datainicial Schema",
+                  "default": "",
+                  "examples": [
+                    "20181114"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "dataFinal": {
+                  "$id": "#/properties/nomes/items/properties/utilizacoes/items/properties/dataFinal",
+                  "type": "string",
+                  "title": "The Datafinal Schema",
+                  "default": "",
+                  "examples": [
+                    "20181114"
+                  ],
+                  "pattern": "^(.*)$"
+                }
+              }
+            }
+          },
+          "representacoes": {
+            "$id": "#/properties/nomes/items/properties/representacoes",
+            "type": "array",
+            "title": "The Representacoes Schema",
+            "items": {
+              "$id": "#/properties/nomes/items/properties/representacoes/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "utilizacao",
+                "alternativa"
+              ],
+              "properties": {
+                "utilizacao": {
+                  "$id": "#/properties/nomes/items/properties/representacoes/items/properties/utilizacao",
+                  "type": "string",
+                  "title": "The Utilizacao Schema",
+                  "default": "",
+                  "examples": [
+                    "A"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "alternativa": {
+                  "$id": "#/properties/nomes/items/properties/representacoes/items/properties/alternativa",
+                  "type": "string",
+                  "title": "The Alternativa Schema",
+                  "default": "",
+                  "examples": [
+                    "JOÃO NINGUÉM"
+                  ],
+                  "pattern": "^(.*)$"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "identificadores": {
+      "$id": "#/properties/identificadores",
+      "type": "array",
+      "title": "The Identificadores Schema",
+      "items": {
+        "$id": "#/properties/identificadores/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "id",
+          "idIndividuo",
+          "designacao",
+          "codigoArea",
+          "emissor",
+          "data",
+          "codigoTipo",
+          "ctps",
+          "certidao",
+          "tituloEleitoral"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/properties/identificadores/items/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "default": 0,
+            "examples": [
+              1234
+            ]
+          },
+          "idIndividuo": {
+            "$id": "#/properties/identificadores/items/properties/idIndividuo",
+            "type": "integer",
+            "title": "The Idindividuo Schema",
+            "default": 0,
+            "examples": [
+              1234
+            ]
+          },
+          "designacao": {
+            "$id": "#/properties/identificadores/items/properties/designacao",
+            "type": "string",
+            "title": "The Designacao Schema",
+            "default": "",
+            "examples": [
+              "SR"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "codigoArea": {
+            "$id": "#/properties/identificadores/items/properties/codigoArea",
+            "type": "integer",
+            "title": "The Codigoarea Schema",
+            "default": 0,
+            "examples": [
+              1
+            ]
+          },
+          "emissor": {
+            "$id": "#/properties/identificadores/items/properties/emissor",
+            "type": "string",
+            "title": "The Emissor Schema",
+            "default": "",
+            "examples": [
+              "GOVERNO FEDERAL"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "data": {
+            "$id": "#/properties/identificadores/items/properties/data",
+            "type": "string",
+            "title": "The Data Schema",
+            "default": "",
+            "examples": [
+              "20181114"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "codigoTipo": {
+            "$id": "#/properties/identificadores/items/properties/codigoTipo",
+            "type": "string",
+            "title": "The Codigotipo Schema",
+            "default": "",
+            "examples": [
+              "..."
+            ],
+            "pattern": "^(.*)$"
+          },
+          "ctps": {
+            "$id": "#/properties/identificadores/items/properties/ctps",
+            "type": "object",
+            "title": "The Ctps Schema",
+            "required": [
+              "serie",
+              "codigoEstado"
+            ],
+            "properties": {
+              "serie": {
+                "$id": "#/properties/identificadores/items/properties/ctps/properties/serie",
+                "type": "integer",
+                "title": "The Serie Schema",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              },
+              "codigoEstado": {
+                "$id": "#/properties/identificadores/items/properties/ctps/properties/codigoEstado",
+                "type": "string",
+                "title": "The Codigoestado Schema",
+                "default": "",
+                "examples": [
+                  "GO"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          },
+          "certidao": {
+            "$id": "#/properties/identificadores/items/properties/certidao",
+            "type": "object",
+            "title": "The Certidao Schema",
+            "required": [
+              "codigoTipo",
+              "cartorio",
+              "livro",
+              "folha",
+              "termo"
+            ],
+            "properties": {
+              "codigoTipo": {
+                "$id": "#/properties/identificadores/items/properties/certidao/properties/codigoTipo",
+                "type": "integer",
+                "title": "The Codigotipo Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "cartorio": {
+                "$id": "#/properties/identificadores/items/properties/certidao/properties/cartorio",
+                "type": "string",
+                "title": "The Cartorio Schema",
+                "default": "",
+                "examples": [
+                  "CARTORIO TESTE"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "livro": {
+                "$id": "#/properties/identificadores/items/properties/certidao/properties/livro",
+                "type": "integer",
+                "title": "The Livro Schema",
+                "default": 0,
+                "examples": [
+                  2
+                ]
+              },
+              "folha": {
+                "$id": "#/properties/identificadores/items/properties/certidao/properties/folha",
+                "type": "integer",
+                "title": "The Folha Schema",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              },
+              "termo": {
+                "$id": "#/properties/identificadores/items/properties/certidao/properties/termo",
+                "type": "integer",
+                "title": "The Termo Schema",
+                "default": 0,
+                "examples": [
+                  3
+                ]
+              }
+            }
+          },
+          "tituloEleitoral": {
+            "$id": "#/properties/identificadores/items/properties/tituloEleitoral",
+            "type": "object",
+            "title": "The Tituloeleitoral Schema",
+            "required": [
+              "zona",
+              "sessao"
+            ],
+            "properties": {
+              "zona": {
+                "$id": "#/properties/identificadores/items/properties/tituloEleitoral/properties/zona",
+                "type": "integer",
+                "title": "The Zona Schema",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              },
+              "sessao": {
+                "$id": "#/properties/identificadores/items/properties/tituloEleitoral/properties/sessao",
+                "type": "integer",
+                "title": "The Sessao Schema",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "vinculos": {
+      "$id": "#/properties/vinculos",
+      "type": "array",
+      "title": "The Vinculos Schema",
+      "items": {
+        "$id": "#/properties/vinculos/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "idIdentificador",
+          "relacionamento",
+          "dataInicio",
+          "dataFim"
+        ],
+        "properties": {
+          "idIdentificador": {
+            "$id": "#/properties/vinculos/items/properties/idIdentificador",
+            "type": "integer",
+            "title": "The Ididentificador Schema",
+            "default": 0,
+            "examples": [
+              1234
+            ]
+          },
+          "relacionamento": {
+            "$id": "#/properties/vinculos/items/properties/relacionamento",
+            "type": "string",
+            "title": "The Relacionamento Schema",
+            "default": "",
+            "examples": [
+              "PAI"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "dataInicio": {
+            "$id": "#/properties/vinculos/items/properties/dataInicio",
+            "type": "string",
+            "title": "The Datainicio Schema",
+            "default": "",
+            "examples": [
+              "20181114"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "dataFim": {
+            "$id": "#/properties/vinculos/items/properties/dataFim",
+            "type": "string",
+            "title": "The Datafim Schema",
+            "default": "",
+            "examples": [
+              "20181114"
+            ],
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    },
+    "enderecos": {
+      "$id": "#/properties/enderecos",
+      "type": "array",
+      "title": "The Enderecos Schema",
+      "items": {
+        "$id": "#/properties/enderecos/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "id",
+          "bairro",
+          "distrito",
+          "cep",
+          "caixaPostal",
+          "codigoMunicipio",
+          "codigoEstado",
+          "codigoPais",
+          "codigoTipo",
+          "dataInicio",
+          "dataFim",
+          "linhas"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/properties/enderecos/items/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "default": 0,
+            "examples": [
+              1234
+            ]
+          },
+          "bairro": {
+            "$id": "#/properties/enderecos/items/properties/bairro",
+            "type": "string",
+            "title": "The Bairro Schema",
+            "default": "",
+            "examples": [
+              "BAIRRO TESTE"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "distrito": {
+            "$id": "#/properties/enderecos/items/properties/distrito",
+            "type": "string",
+            "title": "The Distrito Schema",
+            "default": "",
+            "examples": [
+              "DISTRITO TESTE"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "cep": {
+            "$id": "#/properties/enderecos/items/properties/cep",
+            "type": "string",
+            "title": "The Cep Schema",
+            "default": "",
+            "examples": [
+              "12345-678"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "caixaPostal": {
+            "$id": "#/properties/enderecos/items/properties/caixaPostal",
+            "type": "string",
+            "title": "The Caixapostal Schema",
+            "default": "",
+            "examples": [
+              "123"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "codigoMunicipio": {
+            "$id": "#/properties/enderecos/items/properties/codigoMunicipio",
+            "type": "integer",
+            "title": "The Codigomunicipio Schema",
+            "default": 0,
+            "examples": [
+              1234
+            ]
+          },
+          "codigoEstado": {
+            "$id": "#/properties/enderecos/items/properties/codigoEstado",
+            "type": "string",
+            "title": "The Codigoestado Schema",
+            "default": "",
+            "examples": [
+              "GO"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "codigoPais": {
+            "$id": "#/properties/enderecos/items/properties/codigoPais",
+            "type": "integer",
+            "title": "The Codigopais Schema",
+            "default": 0,
+            "examples": [
+              55
+            ]
+          },
+          "codigoTipo": {
+            "$id": "#/properties/enderecos/items/properties/codigoTipo",
+            "type": "integer",
+            "title": "The Codigotipo Schema",
+            "default": 0,
+            "examples": [
+              1
+            ]
+          },
+          "dataInicio": {
+            "$id": "#/properties/enderecos/items/properties/dataInicio",
+            "type": "object",
+            "title": "The Datainicio Schema",
+            "required": [
+              "data"
+            ],
+            "properties": {
+              "data": {
+                "$id": "#/properties/enderecos/items/properties/dataInicio/properties/data",
+                "type": "string",
+                "title": "The Data Schema",
+                "default": "",
+                "examples": [
+                  "20181114"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          },
+          "dataFim": {
+            "$id": "#/properties/enderecos/items/properties/dataFim",
+            "type": "object",
+            "title": "The Datafim Schema",
+            "required": [
+              "data",
+              "acuracia"
+            ],
+            "properties": {
+              "data": {
+                "$id": "#/properties/enderecos/items/properties/dataFim/properties/data",
+                "type": "string",
+                "title": "The Data Schema",
+                "default": "",
+                "examples": [
+                  "20181114"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "acuracia": {
+                "$id": "#/properties/enderecos/items/properties/dataFim/properties/acuracia",
+                "type": "string",
+                "title": "The Acuracia Schema",
+                "default": "",
+                "examples": [
+                  "..."
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          },
+          "linhas": {
+            "$id": "#/properties/enderecos/items/properties/linhas",
+            "type": "array",
+            "title": "The Linhas Schema",
+            "items": {
+              "$id": "#/properties/enderecos/items/properties/linhas/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "linha",
+                "ordem"
+              ],
+              "properties": {
+                "linha": {
+                  "$id": "#/properties/enderecos/items/properties/linhas/items/properties/linha",
+                  "type": "string",
+                  "title": "The Linha Schema",
+                  "default": "",
+                  "examples": [
+                    "RUA A"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "ordem": {
+                  "$id": "#/properties/enderecos/items/properties/linhas/items/properties/ordem",
+                  "type": "integer",
+                  "title": "The Ordem Schema",
+                  "default": 0,
+                  "examples": [
+                    0
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "dadoDemografico": {
+      "$id": "#/properties/dadoDemografico",
+      "type": "object",
+      "title": "The Dadodemografico Schema",
+      "required": [
+        "codigoSexo",
+        "codigoRaca",
+        "nacionalidade",
+        "mae",
+        "pai",
+        "codigoSituacaoFamiliar",
+        "nascimento",
+        "codigoNascimentoPluraridade",
+        "codigoNascimentoOrdem",
+        "codigoNascimentoSeguimento",
+        "obito",
+        "codigoObitoFonte",
+        "comentario"
+      ],
+      "properties": {
+        "codigoSexo": {
+          "$id": "#/properties/dadoDemografico/properties/codigoSexo",
+          "type": "integer",
+          "title": "The Codigosexo Schema",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "codigoRaca": {
+          "$id": "#/properties/dadoDemografico/properties/codigoRaca",
+          "type": "integer",
+          "title": "The Codigoraca Schema",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "nacionalidade": {
+          "$id": "#/properties/dadoDemografico/properties/nacionalidade",
+          "type": "object",
+          "title": "The Nacionalidade Schema",
+          "required": [
+            "codigoMunicipio",
+            "codigoEstado",
+            "codigoPais",
+            "dataEntradaPais"
+          ],
+          "properties": {
+            "codigoMunicipio": {
+              "$id": "#/properties/dadoDemografico/properties/nacionalidade/properties/codigoMunicipio",
+              "type": "integer",
+              "title": "The Codigomunicipio Schema",
+              "default": 0,
+              "examples": [
+                1234
+              ]
+            },
+            "codigoEstado": {
+              "$id": "#/properties/dadoDemografico/properties/nacionalidade/properties/codigoEstado",
+              "type": "string",
+              "title": "The Codigoestado Schema",
+              "default": "",
+              "examples": [
+                "GO"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "codigoPais": {
+              "$id": "#/properties/dadoDemografico/properties/nacionalidade/properties/codigoPais",
+              "type": "integer",
+              "title": "The Codigopais Schema",
+              "default": 0,
+              "examples": [
+                55
+              ]
+            },
+            "dataEntradaPais": {
+              "$id": "#/properties/dadoDemografico/properties/nacionalidade/properties/dataEntradaPais",
+              "type": "string",
+              "title": "The Dataentradapais Schema",
+              "default": "",
+              "examples": [
+                "20181114"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        },
+        "mae": {
+          "$id": "#/properties/dadoDemografico/properties/mae",
+          "type": "string",
+          "title": "The Mae Schema",
+          "default": "",
+          "examples": [
+            "MARIA DA SILVA"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "pai": {
+          "$id": "#/properties/dadoDemografico/properties/pai",
+          "type": "string",
+          "title": "The Pai Schema",
+          "default": "",
+          "examples": [
+            "JOÃO DA SILVA"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "codigoSituacaoFamiliar": {
+          "$id": "#/properties/dadoDemografico/properties/codigoSituacaoFamiliar",
+          "type": "integer",
+          "title": "The Codigosituacaofamiliar Schema",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "nascimento": {
+          "$id": "#/properties/dadoDemografico/properties/nascimento",
+          "type": "object",
+          "title": "The Nascimento Schema",
+          "required": [
+            "data",
+            "acuracia"
+          ],
+          "properties": {
+            "data": {
+              "$id": "#/properties/dadoDemografico/properties/nascimento/properties/data",
+              "type": "string",
+              "title": "The Data Schema",
+              "default": "",
+              "examples": [
+                "20181114"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "acuracia": {
+              "$id": "#/properties/dadoDemografico/properties/nascimento/properties/acuracia",
+              "type": "string",
+              "title": "The Acuracia Schema",
+              "default": "",
+              "examples": [
+                "..."
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        },
+        "codigoNascimentoPluraridade": {
+          "$id": "#/properties/dadoDemografico/properties/codigoNascimentoPluraridade",
+          "type": "integer",
+          "title": "The Codigonascimentopluraridade Schema",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "codigoNascimentoOrdem": {
+          "$id": "#/properties/dadoDemografico/properties/codigoNascimentoOrdem",
+          "type": "integer",
+          "title": "The Codigonascimentoordem Schema",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "codigoNascimentoSeguimento": {
+          "$id": "#/properties/dadoDemografico/properties/codigoNascimentoSeguimento",
+          "type": "string",
+          "title": "The Codigonascimentoseguimento Schema",
+          "default": "",
+          "examples": [
+            "A"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "obito": {
+          "$id": "#/properties/dadoDemografico/properties/obito",
+          "type": "object",
+          "title": "The Obito Schema",
+          "required": [
+            "data",
+            "acuracia"
+          ],
+          "properties": {
+            "data": {
+              "$id": "#/properties/dadoDemografico/properties/obito/properties/data",
+              "type": "string",
+              "title": "The Data Schema",
+              "default": "",
+              "examples": [
+                "20181114"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "acuracia": {
+              "$id": "#/properties/dadoDemografico/properties/obito/properties/acuracia",
+              "type": "string",
+              "title": "The Acuracia Schema",
+              "default": "",
+              "examples": [
+                "..."
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        },
+        "codigoObitoFonte": {
+          "$id": "#/properties/dadoDemografico/properties/codigoObitoFonte",
+          "type": "integer",
+          "title": "The Codigoobitofonte Schema",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "comentario": {
+          "$id": "#/properties/dadoDemografico/properties/comentario",
+          "type": "string",
+          "title": "The Comentario Schema",
+          "default": "",
+          "examples": [
+            "Comentário..."
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "comunicacoes": {
+      "$id": "#/properties/comunicacoes",
+      "type": "array",
+      "title": "The Comunicacoes Schema",
+      "items": {
+        "$id": "#/properties/comunicacoes/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "codigoMeio",
+          "codigoPreferencia",
+          "codigoUso",
+          "detalhe"
+        ],
+        "properties": {
+          "codigoMeio": {
+            "$id": "#/properties/comunicacoes/items/properties/codigoMeio",
+            "type": "integer",
+            "title": "The Codigomeio Schema",
+            "default": 0,
+            "examples": [
+              1
+            ]
+          },
+          "codigoPreferencia": {
+            "$id": "#/properties/comunicacoes/items/properties/codigoPreferencia",
+            "type": "string",
+            "title": "The Codigopreferencia Schema",
+            "default": "",
+            "examples": [
+              "B"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "codigoUso": {
+            "$id": "#/properties/comunicacoes/items/properties/codigoUso",
+            "type": "integer",
+            "title": "The Codigouso Schema",
+            "default": 0,
+            "examples": [
+              2
+            ]
+          },
+          "detalhe": {
+            "$id": "#/properties/comunicacoes/items/properties/detalhe",
+            "type": "string",
+            "title": "The Detalhe Schema",
+            "default": "",
+            "examples": [
+              "(11) 3000-0000"
+            ],
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    }
+  }
+}

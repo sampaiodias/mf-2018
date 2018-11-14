@@ -1,33 +1,33 @@
- 1 {
- 2   "definitions": {},
- 3   "$schema": "http://json-schema.org/draft-07/schema#",
- 4   "$id": "http://example.com/root.json",
- 5   "type": "object",
- 6   "title": "The Root Schema",
- 7   "required": [
- 8     "utilizacao",
- 9     "alternativa"
-10   ],
-11   "properties": {
-12     "utilizacao": {
-13       "$id": "#/properties/utilizacao",
-14       "type": "string",
-15       "title": "The Utilizacao Schema",
-16       "default": "",
-17       "examples": [
-18         "B"
-19       ],
-20       "pattern": "^(.*)$"
-21     },
-22     "alternativa": {
-23       "$id": "#/properties/alternativa",
-24       "type": "string",
-25       "title": "The Alternativa Schema",
-26       "default": "",
-27       "examples": [
-28         "A"
-29       ],
-30       "pattern": "^(.*)$"
-31     }
-32   }
-33 }
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "utilizacao",
+    "alternativa"
+  ],
+  "properties": {
+    "utilizacao": {
+      "$id": "#/properties/utilizacao",
+      "type": "string",
+      "title": "The Utilizacao Schema",
+      "default": "",
+      "examples": [
+        "B"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "alternativa": {
+      "$id": "#/properties/alternativa",
+      "type": "string",
+      "title": "The Alternativa Schema",
+      "default": "",
+      "examples": [
+        "A"
+      ],
+      "pattern": "^(.*)$"
+    }
+  }
+}

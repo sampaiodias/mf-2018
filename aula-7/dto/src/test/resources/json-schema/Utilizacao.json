@@ -1,53 +1,53 @@
- 1 {
- 2   "definitions": {},
- 3   "$schema": "http://json-schema.org/draft-07/schema#",
- 4   "$id": "http://example.com/root.json",
- 5   "type": "object",
- 6   "title": "The Root Schema",
- 7   "required": [
- 8     "idIdentificador",
- 9     "codigoUso",
-10     "dataInicial",
-11     "dataFinal"
-12   ],
-13   "properties": {
-14     "idIdentificador": {
-15       "$id": "#/properties/idIdentificador",
-16       "type": "integer",
-17       "title": "The Ididentificador Schema",
-18       "default": 0,
-19       "examples": [
-20         1234
-21       ]
-22     },
-23     "codigoUso": {
-24       "$id": "#/properties/codigoUso",
-25       "type": "integer",
-26       "title": "The Codigouso Schema",
-27       "default": 0,
-28       "examples": [
-29         123
-30       ]
-31     },
-32     "dataInicial": {
-33       "$id": "#/properties/dataInicial",
-34       "type": "string",
-35       "title": "The Datainicial Schema",
-36       "default": "",
-37       "examples": [
-38         "20181114"
-39       ],
-40       "pattern": "^(.*)$"
-41     },
-42     "dataFinal": {
-43       "$id": "#/properties/dataFinal",
-44       "type": "string",
-45       "title": "The Datafinal Schema",
-46       "default": "",
-47       "examples": [
-48         "20181114"
-49       ],
-50       "pattern": "^(.*)$"
-51     }
-52   }
-53 }
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "idIdentificador",
+    "codigoUso",
+    "dataInicial",
+    "dataFinal"
+  ],
+  "properties": {
+    "idIdentificador": {
+      "$id": "#/properties/idIdentificador",
+      "type": "integer",
+      "title": "The Ididentificador Schema",
+      "default": 0,
+      "examples": [
+        1234
+      ]
+    },
+    "codigoUso": {
+      "$id": "#/properties/codigoUso",
+      "type": "integer",
+      "title": "The Codigouso Schema",
+      "default": 0,
+      "examples": [
+        123
+      ]
+    },
+    "dataInicial": {
+      "$id": "#/properties/dataInicial",
+      "type": "string",
+      "title": "The Datainicial Schema",
+      "default": "",
+      "examples": [
+        "20181114"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "dataFinal": {
+      "$id": "#/properties/dataFinal",
+      "type": "string",
+      "title": "The Datafinal Schema",
+      "default": "",
+      "examples": [
+        "20181114"
+      ],
+      "pattern": "^(.*)$"
+    }
+  }
+}

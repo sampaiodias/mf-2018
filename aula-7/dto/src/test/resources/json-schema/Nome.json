@@ -1,179 +1,179 @@
-  1 {
-  2   "definitions": {},
-  3   "$schema": "http://json-schema.org/draft-07/schema#",
-  4   "$id": "http://example.com/root.json",
-  5   "type": "object",
-  6   "title": "The Root Schema",
-  7   "required": [
-  8     "id",
-  9     "titulos",
- 10     "nomes",
- 11     "sobrenomes",
- 12     "sufixos",
- 13     "codigoPreferido",
- 14     "codigoUsoCondicional",
- 15     "utilizacoes",
- 16     "representacoes"
- 17   ],
- 18   "properties": {
- 19     "id": {
- 20       "$id": "#/properties/id",
- 21       "type": "integer",
- 22       "title": "The Id Schema",
- 23       "default": 0,
- 24       "examples": [
- 25         1234
- 26       ]
- 27     },
- 28     "titulos": {
- 29       "$id": "#/properties/titulos",
- 30       "type": "string",
- 31       "title": "The Titulos Schema",
- 32       "default": "",
- 33       "examples": [
- 34         "DR."
- 35       ],
- 36       "pattern": "^(.*)$"
- 37     },
- 38     "nomes": {
- 39       "$id": "#/properties/nomes",
- 40       "type": "string",
- 41       "title": "The Nomes Schema",
- 42       "default": "",
- 43       "examples": [
- 44         "JOAO"
- 45       ],
- 46       "pattern": "^(.*)$"
- 47     },
- 48     "sobrenomes": {
- 49       "$id": "#/properties/sobrenomes",
- 50       "type": "string",
- 51       "title": "The Sobrenomes Schema",
- 52       "default": "",
- 53       "examples": [
- 54         "NINGUÉM"
- 55       ],
- 56       "pattern": "^(.*)$"
- 57     },
- 58     "sufixos": {
- 59       "$id": "#/properties/sufixos",
- 60       "type": "string",
- 61       "title": "The Sufixos Schema",
- 62       "default": "",
- 63       "examples": [
- 64         "SR."
- 65       ],
- 66       "pattern": "^(.*)$"
- 67     },
- 68     "codigoPreferido": {
- 69       "$id": "#/properties/codigoPreferido",
- 70       "type": "integer",
- 71       "title": "The Codigopreferido Schema",
- 72       "default": 0,
- 73       "examples": [
- 74         1
- 75       ]
- 76     },
- 77     "codigoUsoCondicional": {
- 78       "$id": "#/properties/codigoUsoCondicional",
- 79       "type": "integer",
- 80       "title": "The Codigousocondicional Schema",
- 81       "default": 0,
- 82       "examples": [
- 83         3
- 84       ]
- 85     },
- 86     "utilizacoes": {
- 87       "$id": "#/properties/utilizacoes",
- 88       "type": "array",
- 89       "title": "The Utilizacoes Schema",
- 90       "items": {
- 91         "$id": "#/properties/utilizacoes/items",
- 92         "type": "object",
- 93         "title": "The Items Schema",
- 94         "required": [
- 95           "idIdentificador",
- 96           "codigoUso",
- 97           "dataInicial",
- 98           "dataFinal"
- 99         ],
-100         "properties": {
-101           "idIdentificador": {
-102             "$id": "#/properties/utilizacoes/items/properties/idIdentificador",
-103             "type": "integer",
-104             "title": "The Ididentificador Schema",
-105             "default": 0,
-106             "examples": [
-107               1234
-108             ]
-109           },
-110           "codigoUso": {
-111             "$id": "#/properties/utilizacoes/items/properties/codigoUso",
-112             "type": "integer",
-113             "title": "The Codigouso Schema",
-114             "default": 0,
-115             "examples": [
-116               1
-117             ]
-118           },
-119           "dataInicial": {
-120             "$id": "#/properties/utilizacoes/items/properties/dataInicial",
-121             "type": "string",
-122             "title": "The Datainicial Schema",
-123             "default": "",
-124             "examples": [
-125               "20181114"
-126             ],
-127             "pattern": "^(.*)$"
-128           },
-129           "dataFinal": {
-130             "$id": "#/properties/utilizacoes/items/properties/dataFinal",
-131             "type": "string",
-132             "title": "The Datafinal Schema",
-133             "default": "",
-134             "examples": [
-135               "20181114"
-136             ],
-137             "pattern": "^(.*)$"
-138           }
-139         }
-140       }
-141     },
-142     "representacoes": {
-143       "$id": "#/properties/representacoes",
-144       "type": "array",
-145       "title": "The Representacoes Schema",
-146       "items": {
-147         "$id": "#/properties/representacoes/items",
-148         "type": "object",
-149         "title": "The Items Schema",
-150         "required": [
-151           "utilizacao",
-152           "alternativa"
-153         ],
-154         "properties": {
-155           "utilizacao": {
-156             "$id": "#/properties/representacoes/items/properties/utilizacao",
-157             "type": "string",
-158             "title": "The Utilizacao Schema",
-159             "default": "",
-160             "examples": [
-161               "A"
-162             ],
-163             "pattern": "^(.*)$"
-164           },
-165           "alternativa": {
-166             "$id": "#/properties/representacoes/items/properties/alternativa",
-167             "type": "string",
-168             "title": "The Alternativa Schema",
-169             "default": "",
-170             "examples": [
-171               "JOÃO NINGUÉM"
-172             ],
-173             "pattern": "^(.*)$"
-174           }
-175         }
-176       }
-177     }
-178   }
-179 }
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "id",
+    "titulos",
+    "nomes",
+    "sobrenomes",
+    "sufixos",
+    "codigoPreferido",
+    "codigoUsoCondicional",
+    "utilizacoes",
+    "representacoes"
+  ],
+  "properties": {
+    "id": {
+      "$id": "#/properties/id",
+      "type": "integer",
+      "title": "The Id Schema",
+      "default": 0,
+      "examples": [
+        1234
+      ]
+    },
+    "titulos": {
+      "$id": "#/properties/titulos",
+      "type": "string",
+      "title": "The Titulos Schema",
+      "default": "",
+      "examples": [
+        "DR."
+      ],
+      "pattern": "^(.*)$"
+    },
+    "nomes": {
+      "$id": "#/properties/nomes",
+      "type": "string",
+      "title": "The Nomes Schema",
+      "default": "",
+      "examples": [
+        "JOAO"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "sobrenomes": {
+      "$id": "#/properties/sobrenomes",
+      "type": "string",
+      "title": "The Sobrenomes Schema",
+      "default": "",
+      "examples": [
+        "NINGUÉM"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "sufixos": {
+      "$id": "#/properties/sufixos",
+      "type": "string",
+      "title": "The Sufixos Schema",
+      "default": "",
+      "examples": [
+        "SR."
+      ],
+      "pattern": "^(.*)$"
+    },
+    "codigoPreferido": {
+      "$id": "#/properties/codigoPreferido",
+      "type": "integer",
+      "title": "The Codigopreferido Schema",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "codigoUsoCondicional": {
+      "$id": "#/properties/codigoUsoCondicional",
+      "type": "integer",
+      "title": "The Codigousocondicional Schema",
+      "default": 0,
+      "examples": [
+        3
+      ]
+    },
+    "utilizacoes": {
+      "$id": "#/properties/utilizacoes",
+      "type": "array",
+      "title": "The Utilizacoes Schema",
+      "items": {
+        "$id": "#/properties/utilizacoes/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "idIdentificador",
+          "codigoUso",
+          "dataInicial",
+          "dataFinal"
+        ],
+        "properties": {
+          "idIdentificador": {
+            "$id": "#/properties/utilizacoes/items/properties/idIdentificador",
+            "type": "integer",
+            "title": "The Ididentificador Schema",
+            "default": 0,
+            "examples": [
+              1234
+            ]
+          },
+          "codigoUso": {
+            "$id": "#/properties/utilizacoes/items/properties/codigoUso",
+            "type": "integer",
+            "title": "The Codigouso Schema",
+            "default": 0,
+            "examples": [
+              1
+            ]
+          },
+          "dataInicial": {
+            "$id": "#/properties/utilizacoes/items/properties/dataInicial",
+            "type": "string",
+            "title": "The Datainicial Schema",
+            "default": "",
+            "examples": [
+              "20181114"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "dataFinal": {
+            "$id": "#/properties/utilizacoes/items/properties/dataFinal",
+            "type": "string",
+            "title": "The Datafinal Schema",
+            "default": "",
+            "examples": [
+              "20181114"
+            ],
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    },
+    "representacoes": {
+      "$id": "#/properties/representacoes",
+      "type": "array",
+      "title": "The Representacoes Schema",
+      "items": {
+        "$id": "#/properties/representacoes/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "utilizacao",
+          "alternativa"
+        ],
+        "properties": {
+          "utilizacao": {
+            "$id": "#/properties/representacoes/items/properties/utilizacao",
+            "type": "string",
+            "title": "The Utilizacao Schema",
+            "default": "",
+            "examples": [
+              "A"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "alternativa": {
+            "$id": "#/properties/representacoes/items/properties/alternativa",
+            "type": "string",
+            "title": "The Alternativa Schema",
+            "default": "",
+            "examples": [
+              "JOÃO NINGUÉM"
+            ],
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    }
+  }
+}

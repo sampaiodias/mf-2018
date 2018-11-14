@@ -1,206 +1,206 @@
-  1 {
-  2   "definitions": {},
-  3   "$schema": "http://json-schema.org/draft-07/schema#",
-  4   "$id": "http://example.com/root.json",
-  5   "type": "object",
-  6   "title": "The Root Schema",
-  7   "required": [
-  8     "id",
-  9     "bairro",
- 10     "distrito",
- 11     "cep",
- 12     "caixaPostal",
- 13     "codigoMunicipio",
- 14     "codigoEstado",
- 15     "codigoPais",
- 16     "codigoTipo",
- 17     "dataInicio",
- 18     "dataFim",
- 19     "linhas"
- 20   ],
- 21   "properties": {
- 22     "id": {
- 23       "$id": "#/properties/id",
- 24       "type": "integer",
- 25       "title": "The Id Schema",
- 26       "default": 0,
- 27       "examples": [
- 28         65
- 29       ]
- 30     },
- 31     "bairro": {
- 32       "$id": "#/properties/bairro",
- 33       "type": "string",
- 34       "title": "The Bairro Schema",
- 35       "default": "",
- 36       "examples": [
- 37         "BAIRRO TESTE"
- 38       ],
- 39       "pattern": "^(.*)$"
- 40     },
- 41     "distrito": {
- 42       "$id": "#/properties/distrito",
- 43       "type": "string",
- 44       "title": "The Distrito Schema",
- 45       "default": "",
- 46       "examples": [
- 47         "DISTRITO TESTE"
- 48       ],
- 49       "pattern": "^(.*)$"
- 50     },
- 51     "cep": {
- 52       "$id": "#/properties/cep",
- 53       "type": "string",
- 54       "title": "The Cep Schema",
- 55       "default": "",
- 56       "examples": [
- 57         "12345-678"
- 58       ],
- 59       "pattern": "^(.*)$"
- 60     },
- 61     "caixaPostal": {
- 62       "$id": "#/properties/caixaPostal",
- 63       "type": "string",
- 64       "title": "The Caixapostal Schema",
- 65       "default": "",
- 66       "examples": [
- 67         "12345"
- 68       ],
- 69       "pattern": "^(.*)$"
- 70     },
- 71     "codigoMunicipio": {
- 72       "$id": "#/properties/codigoMunicipio",
- 73       "type": "integer",
- 74       "title": "The Codigomunicipio Schema",
- 75       "default": 0,
- 76       "examples": [
- 77         123
- 78       ]
- 79     },
- 80     "codigoEstado": {
- 81       "$id": "#/properties/codigoEstado",
- 82       "type": "string",
- 83       "title": "The Codigoestado Schema",
- 84       "default": "",
- 85       "examples": [
- 86         "GO"
- 87       ],
- 88       "pattern": "^(.*)$"
- 89     },
- 90     "codigoPais": {
- 91       "$id": "#/properties/codigoPais",
- 92       "type": "integer",
- 93       "title": "The Codigopais Schema",
- 94       "default": 0,
- 95       "examples": [
- 96         55
- 97       ]
- 98     },
- 99     "codigoTipo": {
-100       "$id": "#/properties/codigoTipo",
-101       "type": "integer",
-102       "title": "The Codigotipo Schema",
-103       "default": 0,
-104       "examples": [
-105         1234
-106       ]
-107     },
-108     "dataInicio": {
-109       "$id": "#/properties/dataInicio",
-110       "type": "object",
-111       "title": "The Datainicio Schema",
-112       "required": [
-113         "data",
-114         "acuracia"
-115       ],
-116       "properties": {
-117         "data": {
-118           "$id": "#/properties/dataInicio/properties/data",
-119           "type": "string",
-120           "title": "The Data Schema",
-121           "default": "",
-122           "examples": [
-123             "20181114"
-124           ],
-125           "pattern": "^(.*)$"
-126         },
-127         "acuracia": {
-128           "$id": "#/properties/dataInicio/properties/acuracia",
-129           "type": "string",
-130           "title": "The Acuracia Schema",
-131           "default": "",
-132           "examples": [
-133             "Acurado"
-134           ],
-135           "pattern": "^(.*)$"
-136         }
-137       }
-138     },
-139     "dataFim": {
-140       "$id": "#/properties/dataFim",
-141       "type": "object",
-142       "title": "The Datafim Schema",
-143       "required": [
-144         "data",
-145         "acuracia"
-146       ],
-147       "properties": {
-148         "data": {
-149           "$id": "#/properties/dataFim/properties/data",
-150           "type": "string",
-151           "title": "The Data Schema",
-152           "default": "",
-153           "examples": [
-154             "20181114"
-155           ],
-156           "pattern": "^(.*)$"
-157         },
-158         "acuracia": {
-159           "$id": "#/properties/dataFim/properties/acuracia",
-160           "type": "string",
-161           "title": "The Acuracia Schema",
-162           "default": "",
-163           "examples": [
-164             "Acurado"
-165           ],
-166           "pattern": "^(.*)$"
-167         }
-168       }
-169     },
-170     "linhas": {
-171       "$id": "#/properties/linhas",
-172       "type": "array",
-173       "title": "The Linhas Schema",
-174       "items": {
-175         "$id": "#/properties/linhas/items",
-176         "type": "object",
-177         "title": "The Items Schema",
-178         "required": [
-179           "linha",
-180           "ordem"
-181         ],
-182         "properties": {
-183           "linha": {
-184             "$id": "#/properties/linhas/items/properties/linha",
-185             "type": "string",
-186             "title": "The Linha Schema",
-187             "default": "",
-188             "examples": [
-189               "A"
-190             ],
-191             "pattern": "^(.*)$"
-192           },
-193           "ordem": {
-194             "$id": "#/properties/linhas/items/properties/ordem",
-195             "type": "integer",
-196             "title": "The Ordem Schema",
-197             "default": 0,
-198             "examples": [
-199               123
-200             ]
-201           }
-202         }
-203       }
-204     }
-205   }
-206 }
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "id",
+    "bairro",
+    "distrito",
+    "cep",
+    "caixaPostal",
+    "codigoMunicipio",
+    "codigoEstado",
+    "codigoPais",
+    "codigoTipo",
+    "dataInicio",
+    "dataFim",
+    "linhas"
+  ],
+  "properties": {
+    "id": {
+      "$id": "#/properties/id",
+      "type": "integer",
+      "title": "The Id Schema",
+      "default": 0,
+      "examples": [
+        65
+      ]
+    },
+    "bairro": {
+      "$id": "#/properties/bairro",
+      "type": "string",
+      "title": "The Bairro Schema",
+      "default": "",
+      "examples": [
+        "BAIRRO TESTE"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "distrito": {
+      "$id": "#/properties/distrito",
+      "type": "string",
+      "title": "The Distrito Schema",
+      "default": "",
+      "examples": [
+        "DISTRITO TESTE"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "cep": {
+      "$id": "#/properties/cep",
+      "type": "string",
+      "title": "The Cep Schema",
+      "default": "",
+      "examples": [
+        "12345-678"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "caixaPostal": {
+      "$id": "#/properties/caixaPostal",
+      "type": "string",
+      "title": "The Caixapostal Schema",
+      "default": "",
+      "examples": [
+        "12345"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "codigoMunicipio": {
+      "$id": "#/properties/codigoMunicipio",
+      "type": "integer",
+      "title": "The Codigomunicipio Schema",
+      "default": 0,
+      "examples": [
+        123
+      ]
+    },
+    "codigoEstado": {
+      "$id": "#/properties/codigoEstado",
+      "type": "string",
+      "title": "The Codigoestado Schema",
+      "default": "",
+      "examples": [
+        "GO"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "codigoPais": {
+      "$id": "#/properties/codigoPais",
+      "type": "integer",
+      "title": "The Codigopais Schema",
+      "default": 0,
+      "examples": [
+        55
+      ]
+    },
+    "codigoTipo": {
+      "$id": "#/properties/codigoTipo",
+      "type": "integer",
+      "title": "The Codigotipo Schema",
+      "default": 0,
+      "examples": [
+        1234
+      ]
+    },
+    "dataInicio": {
+      "$id": "#/properties/dataInicio",
+      "type": "object",
+      "title": "The Datainicio Schema",
+      "required": [
+        "data",
+        "acuracia"
+      ],
+      "properties": {
+        "data": {
+          "$id": "#/properties/dataInicio/properties/data",
+          "type": "string",
+          "title": "The Data Schema",
+          "default": "",
+          "examples": [
+            "20181114"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "acuracia": {
+          "$id": "#/properties/dataInicio/properties/acuracia",
+          "type": "string",
+          "title": "The Acuracia Schema",
+          "default": "",
+          "examples": [
+            "Acurado"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "dataFim": {
+      "$id": "#/properties/dataFim",
+      "type": "object",
+      "title": "The Datafim Schema",
+      "required": [
+        "data",
+        "acuracia"
+      ],
+      "properties": {
+        "data": {
+          "$id": "#/properties/dataFim/properties/data",
+          "type": "string",
+          "title": "The Data Schema",
+          "default": "",
+          "examples": [
+            "20181114"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "acuracia": {
+          "$id": "#/properties/dataFim/properties/acuracia",
+          "type": "string",
+          "title": "The Acuracia Schema",
+          "default": "",
+          "examples": [
+            "Acurado"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "linhas": {
+      "$id": "#/properties/linhas",
+      "type": "array",
+      "title": "The Linhas Schema",
+      "items": {
+        "$id": "#/properties/linhas/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "linha",
+          "ordem"
+        ],
+        "properties": {
+          "linha": {
+            "$id": "#/properties/linhas/items/properties/linha",
+            "type": "string",
+            "title": "The Linha Schema",
+            "default": "",
+            "examples": [
+              "A"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "ordem": {
+            "$id": "#/properties/linhas/items/properties/ordem",
+            "type": "integer",
+            "title": "The Ordem Schema",
+            "default": 0,
+            "examples": [
+              123
+            ]
+          }
+        }
+      }
+    }
+  }
+}

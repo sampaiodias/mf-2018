@@ -1,62 +1,62 @@
- 1 {
- 2   "definitions": {},
- 3   "$schema": "http://json-schema.org/draft-07/schema#",
- 4   "$id": "http://example.com/root.json",
- 5   "type": "object",
- 6   "title": "The Root Schema",
- 7   "required": [
- 8     "codigoTipo",
- 9     "cartorio",
-10     "livro",
-11     "folha",
-12     "termo"
-13   ],
-14   "properties": {
-15     "codigoTipo": {
-16       "$id": "#/properties/codigoTipo",
-17       "type": "integer",
-18       "title": "The Codigotipo Schema",
-19       "default": 0,
-20       "examples": [
-21         1234
-22       ]
-23     },
-24     "cartorio": {
-25       "$id": "#/properties/cartorio",
-26       "type": "string",
-27       "title": "The Cartorio Schema",
-28       "default": "",
-29       "examples": [
-30         "Cartório A"
-31       ],
-32       "pattern": "^(.*)$"
-33     },
-34     "livro": {
-35       "$id": "#/properties/livro",
-36       "type": "integer",
-37       "title": "The Livro Schema",
-38       "default": 0,
-39       "examples": [
-40         2
-41       ]
-42     },
-43     "folha": {
-44       "$id": "#/properties/folha",
-45       "type": "integer",
-46       "title": "The Folha Schema",
-47       "default": 0,
-48       "examples": [
-49         1
-50       ]
-51     },
-52     "termo": {
-53       "$id": "#/properties/termo",
-54       "type": "integer",
-55       "title": "The Termo Schema",
-56       "default": 0,
-57       "examples": [
-58         3
-59       ]
-60     }
-61   }
-62 }
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "codigoTipo",
+    "cartorio",
+    "livro",
+    "folha",
+    "termo"
+  ],
+  "properties": {
+    "codigoTipo": {
+      "$id": "#/properties/codigoTipo",
+      "type": "integer",
+      "title": "The Codigotipo Schema",
+      "default": 0,
+      "examples": [
+        1234
+      ]
+    },
+    "cartorio": {
+      "$id": "#/properties/cartorio",
+      "type": "string",
+      "title": "The Cartorio Schema",
+      "default": "",
+      "examples": [
+        "Cartório A"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "livro": {
+      "$id": "#/properties/livro",
+      "type": "integer",
+      "title": "The Livro Schema",
+      "default": 0,
+      "examples": [
+        2
+      ]
+    },
+    "folha": {
+      "$id": "#/properties/folha",
+      "type": "integer",
+      "title": "The Folha Schema",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "termo": {
+      "$id": "#/properties/termo",
+      "type": "integer",
+      "title": "The Termo Schema",
+      "default": 0,
+      "examples": [
+        3
+      ]
+    }
+  }
+}
