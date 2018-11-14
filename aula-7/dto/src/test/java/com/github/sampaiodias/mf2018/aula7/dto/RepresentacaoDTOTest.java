@@ -27,7 +27,7 @@ public class RepresentacaoDTOTest {
     }
 
     @Test
-    public void ctpsToAndFromJsonTest() {
+    public void representacaoToAndFromJsonTest() {
         final RepresentacaoDTO rep = getRepresentacaoDeTestes();
         final String json = rep.toJson();
         final RepresentacaoDTO repObtido = RepresentacaoDTO.fromJson(json);
@@ -35,7 +35,7 @@ public class RepresentacaoDTOTest {
     }
 
     @Test
-    public void ctpsToAndFromXmlTest() throws JAXBException {
+    public void representacaoToAndFromXmlTest() throws JAXBException {
         final RepresentacaoDTO rep = getRepresentacaoDeTestes();
         final String xml = rep.toXml();
         final RepresentacaoDTO repObtido = RepresentacaoDTO.fromXml(xml);
