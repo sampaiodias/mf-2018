@@ -1,24 +1,24 @@
-syntax = "proto3";
+syntax = "proto2";
 
 message Identificador {
-  required int32 id = 0
-  required int32 idIndividuo = 1
-  required string designacao = 2
-  required int32 codigoArea = 3
-  required string emissor = 4
-  required string data = 5
-  required string codigoTipo = 6
+  required double id = 1;
+  required double idIndividuo = 2;
+  required string designacao = 3;
+  required double codigoArea = 4;
+  required string emissor = 5;
+  required string data = 6;
+  required string codigoTipo = 7;
 
   message Certidao {
-    required string cartorio = 0
+    required string cartorio = 1;
   }
 
-  required Certidao certidao = 7
+  required Certidao certidao = 8;
 
   message TituloEleitoral {
-    required int32 zona = 0
-    required int32 sessao = 1
+    required double zona = 1;
+    required double sessao = 2;
   }
 
-  required TituloEleitoral tituloEleitoral = 8
+  required TituloEleitoral tituloEleitoral = 9;
 }
