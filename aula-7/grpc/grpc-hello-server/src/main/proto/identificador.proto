@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option java_package = "com.github.sampaiodias.mf2018.aula7.grpc";
+
+message Identificador {
+  double id = 1;
+  double idIndividuo = 2;
+  string designacao = 3;
+  double codigoArea = 4;
+  string emissor = 5;
+  string data = 6;
+  string codigoTipo = 7;
+
+  message Certidao {
+    string cartorio = 1;
+  }
+
+  Certidao certidao = 8;
+
+  message TituloEleitoral {
+    double zona = 1;
+    double sessao = 2;
+  }
+
+  TituloEleitoral tituloEleitoral = 9;
+}
+
+service SendIdentificadorService {
+  rpc SendIdentificador (Identificador) returns (Identificador);
+}
