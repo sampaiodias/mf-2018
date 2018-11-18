@@ -12,24 +12,23 @@ package com.github.sampaiodias.mf2018.aula7.grpc;
 public class Aplicacao {
     public static void main(String[] args) {
         IdentificadorOuterClass.Identificador id = buildIdentificador();
-        System.out.println(id.getAllFields());
+        System.out.println(id.toString());
     }
     
     private static IdentificadorOuterClass.Identificador buildIdentificador() {
         IdentificadorOuterClass.Identificador.Certidao c = 
-                IdentificadorOuterClass.Identificador.Certidao.newBuilder()
-                    .setCartorio("A")
-                    .build();
+            IdentificadorOuterClass.Identificador.Certidao.newBuilder()
+                .setCartorio("A")
+                .build();
         
         IdentificadorOuterClass.Identificador.TituloEleitoral t = 
-                IdentificadorOuterClass.Identificador.TituloEleitoral.
-                        newBuilder()
-                            .setSessao(1)
-                            .setZona(2)
-                            .build();
+            IdentificadorOuterClass.Identificador.TituloEleitoral.newBuilder()
+                .setSessao(1)
+                .setZona(2)
+                .build();
         
         IdentificadorOuterClass.Identificador id = IdentificadorOuterClass.
-                Identificador.newBuilder()
+            Identificador.newBuilder()
                 .setCodigoArea(12345)
                 .setCodigoTipo("TIPO")
                 .setData("20180101")
