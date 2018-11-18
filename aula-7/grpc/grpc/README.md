@@ -1,0 +1,1 @@
+![Screenshot](web-app/images/screenshot.png)
