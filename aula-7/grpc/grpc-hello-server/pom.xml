@@ -4,11 +4,17 @@
   <groupId>com.github.sampaiodias</groupId>
   <artifactId>grpc-hello-server</artifactId>
   <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   <name>grpc-hello-server</name>
   <url>http://maven.apache.org</url>
-  <dependencies>
 
+  <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.mainClass>com.github.sampaiodias.mf2018.aula7.grpc.App
+        </project.mainClass>
+  </properties>
+
+  <dependencies>
     <dependency>
       <groupId>io.grpc</groupId>
       <artifactId>grpc-netty</artifactId>
@@ -58,6 +64,51 @@
             </goals>
           </execution>
         </executions>
+      </plugin>
+
+      <!-- PASSO (1/2) PARA GERAÇÃO DE JAR FILE EXECUTÁVEL   -->
+      <!-- Exige dir 'jars' e Exemplo.jar no mesmo diretório -->
+      <!-- Dependências são copiadas para diretório 'jars'   -->
+      <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <version>3.1.1</version>
+          <executions>
+              <execution>
+                  <id>copy-dependencies</id>
+                  <phase>package</phase>
+                  <goals>
+                      <goal>copy-dependencies</goal>
+                  </goals>
+                  <configuration>
+                      <includeScope>runtime</includeScope>
+                      <outputDirectory>
+                          ${project.build.directory}/jars/
+                      </outputDirectory>
+                  </configuration>
+              </execution>
+          </executions>
+      </plugin>
+
+      <!-- PASSO (2/2) PARA GERAÇÃO DE JAR FILE EXECUTÁVEL   -->
+      <!-- Configura arquivo MANIFEST.MF                     -->
+      <!-- Class-Path: formado pelos arquivos em 'jars'      -->
+      <!-- Main-Class: classe a ser executada (método main)) -->
+      <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.0.2</version>
+          <configuration>
+              <archive>
+                  <!-- Evita inclusão dir 'maven' em META-INF -->
+                  <addMavenDescriptor>false</addMavenDescriptor>
+                  <manifest>
+                      <addClasspath>true</addClasspath>
+                      <classpathPrefix>jars/</classpathPrefix>
+                      <mainClass>${project.mainClass}</mainClass>
+                  </manifest>
+              </archive>
+          </configuration>
       </plugin>
     </plugins>
   </build>
