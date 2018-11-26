@@ -31,6 +31,7 @@ import org.springframework.dao.DataAccessException;
 public class Aplicacao implements CommandLineRunner {
 
     private static final Logger log = LoggerFactory.getLogger(Aplicacao.class);
+    private boolean bancoConfigurado;
 
     public static void main(String args[]) {
         SpringApplication.run(Aplicacao.class, args);
@@ -43,11 +44,27 @@ public class Aplicacao implements CommandLineRunner {
     public void run(String... strings) throws Exception {
         criarTabelas();
         //popularTabelas();
-        popularTabelasDeTeste();
+        popularTabelasDeTeste();        
+        bancoConfigurado = true;
         
-        jdbcTemplate.query("SELECT * FROM SourceOrganization",
-            (rs, rowNum) -> new SourceOrganization(rs.getString("copyright_id"), rs.getString("name"), "", "", "")
-                ).forEach(organization -> log.info(organization.name + " " + organization.copyrightId));
+        //Temporário
+        getAllSourceOrganizations()
+                .forEach(org -> System.out.println(org.copyrightId));
+    }
+
+    private List<SourceOrganization> getAllSourceOrganizations() throws DataAccessException {
+        if (!bancoConfigurado) {
+            return null;
+        }
+
+        return jdbcTemplate.query("SELECT * FROM SourceOrganization",
+                (rs, rowNum) -> new SourceOrganization(
+                        rs.getString("copyright_id"), 
+                        rs.getString("name"), 
+                        rs.getString("copyright"), 
+                        rs.getString("terms_of_use"), 
+                        rs.getString("url"))
+        );
     }
 
     private void criarTabelas() throws DataAccessException {
