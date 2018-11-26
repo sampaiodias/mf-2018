@@ -10,7 +10,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.mainClass>com.github.sampaiodias.mf2018.aula8.Loinc</project.mainClass>
+        <project.mainClass>com.github.sampaiodias.mf2018.aula8.Aplicacao</project.mainClass>
     </properties>
 
     <name>${project.groupId}:${project.artifactId}</name>
