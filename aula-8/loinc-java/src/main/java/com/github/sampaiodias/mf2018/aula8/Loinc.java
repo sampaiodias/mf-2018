@@ -7,8 +7,8 @@ package com.github.sampaiodias.mf2018.aula8;
 
 /**
  *
- * @author Lucas
+ * @author Lucas Sampaio Dias
  */
 public class Loinc {
-    
+
 }
