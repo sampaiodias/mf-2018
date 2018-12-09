@@ -52,4 +52,11 @@ public class LoincTest {
         assertEquals(actual.get(0).component, expected.get(0).component);
     }
     
+    @Test
+    public void testProcurarPeloNome() throws Exception {
+        ArrayList<LoincObject> list = loinc.procurarPeloNome("CD10 cells/100 cells in");
+        
+        assertEquals(list.size(), 8);
+    }
+    
 }

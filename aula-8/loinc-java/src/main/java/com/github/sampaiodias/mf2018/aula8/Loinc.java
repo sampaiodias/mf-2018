@@ -17,22 +17,22 @@ import java.util.ArrayList;
  */
 public class Loinc {
     
-    private final String user;
-    private final String password;
+    private final String usuario;
+    private final String senha;
     
     /**
      * Cria uma instância válida para utilização do banco de dados Loinc.
-     * @param user Usuário do MySQL configurado na máquina.
-     * @param password Senha do Usuário informado.
+     * @param usuario Usuário do MySQL configurado na máquina.
+     * @param senha Senha do Usuário informado.
      */
-    public Loinc(String user, String password) {
-        this.user = user;
-        this.password = password;
+    public Loinc(String usuario, String senha) {
+        this.usuario = usuario;
+        this.senha = senha;
     }
     
     private Connection connectToDatabase() {
         try {
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/loinc_db?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", this.user, this.password);
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/loinc_db?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", this.usuario, this.senha);
             return conn;
         } catch (Exception e) {
             e.printStackTrace();
@@ -90,5 +90,18 @@ public class Loinc {
         statement.setString(1, "%" + componente + "%");
         return Loinc.this.getLoincs(statement.executeQuery());
     }    
+    
+    /**
+     * Procura todos os Loincs que correspondam ao nome especificado.
+     * @param nome
+     * @return
+     * @throws SQLException 
+     */
+    public ArrayList<LoincObject> procurarPeloNome(String nome) throws SQLException {
+        String sql = "select * from LoincCore where LONG_COMMON_NAME LIKE ?";
+        PreparedStatement statement = connectToDatabase().prepareStatement(sql);
+        statement.setString(1, "%" + nome + "%");
+        return Loinc.this.getLoincs(statement.executeQuery());
+    }  
     
 }
