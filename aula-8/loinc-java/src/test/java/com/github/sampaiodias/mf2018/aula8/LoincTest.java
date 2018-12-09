@@ -9,6 +9,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.BeforeClass;
 import java.sql.*;
+import java.util.ArrayList;
 
 /**
  *
@@ -28,9 +29,16 @@ public class LoincTest {
 
     @Test
     public void testQuery() throws SQLException {
-        ResultSet r = loinc.Query("select * from LoincCore where LOINC_NUM = '10000-8'");
+        ResultSet r = loinc.query("select * from LoincCore where LOINC_NUM = '10000-8'");
         r.next();
         assertEquals("R wave duration.lead AVR", r.getString("COMPONENT"));
+    }
+    
+    @Test
+    public void testGetLoincs() throws SQLException {
+        ResultSet r = loinc.query("select * from LoincCore where LOINC_NUM = '10000-8'");
+        ArrayList<LoincObject> list = loinc.getLoincs(r);
+        assertEquals("R wave duration.lead AVR", list.get(0).component);
     }
     
 }

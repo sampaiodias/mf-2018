@@ -5,6 +5,7 @@
  */
 package com.github.sampaiodias.mf2018.aula8;
 import java.sql.*;
+import java.util.ArrayList;
 
 /**
  * Conecta no banco de dados MySQL do Loinc e disponibiliza uma série de
@@ -24,7 +25,7 @@ public class Loinc {
         this.password = password;
     }
     
-    private Connection ConnectToDatabase() {
+    private Connection connectToDatabase() {
         try {
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/loinc_db?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", this.user, this.password);
             return conn;
@@ -34,9 +35,9 @@ public class Loinc {
         return null;
     }
     
-    public ResultSet Query(String mysqlQuery) {
+    public ResultSet query(String mysqlQuery) {
         try {
-            Connection conn = ConnectToDatabase();
+            Connection conn = connectToDatabase();
             Statement statement = conn.createStatement();
             ResultSet result = statement.executeQuery(mysqlQuery);
             return result;
@@ -44,5 +45,13 @@ public class Loinc {
             e.printStackTrace();
         }
         return null;
+    }
+    
+    public ArrayList<LoincObject> getLoincs(ResultSet result) throws SQLException {
+        ArrayList<LoincObject> list = new ArrayList<>();
+        while(result.next()) {
+            list.add(new LoincObject(result));
+        }        
+        return list;
     }
 }
