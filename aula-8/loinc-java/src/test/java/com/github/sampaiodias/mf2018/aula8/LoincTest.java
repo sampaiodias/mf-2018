@@ -23,7 +23,7 @@ public class LoincTest {
 
     @BeforeClass
     public static void setUpClass() throws Exception {
-        loinc = new Loinc("root", "123456");
+        loinc = new Loinc("root", "123456", "localhost:3306");
     }
     
     @Test

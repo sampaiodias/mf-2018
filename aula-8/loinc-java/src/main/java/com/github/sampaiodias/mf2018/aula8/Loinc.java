@@ -19,20 +19,23 @@ public class Loinc {
     
     private final String usuario;
     private final String senha;
+    private final String url;
     
     /**
      * Cria uma instância válida para utilização do banco de dados Loinc.
      * @param usuario Usuário do MySQL configurado na máquina.
      * @param senha Senha do Usuário informado.
+     * @param url URL para o banco de dados (ex.: localhost:3306).
      */
-    public Loinc(String usuario, String senha) {
+    public Loinc(String usuario, String senha, String url) {
         this.usuario = usuario;
         this.senha = senha;
+        this.url = url;
     }
     
-    private Connection connectToDatabase() {
+    private Connection conectarAoBanco() {
         try {
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/loinc_db?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", this.usuario, this.senha);
+            Connection conn = DriverManager.getConnection("jdbc:mysql://" + url + "/loinc_db?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", this.usuario, this.senha);
             return conn;
         } catch (Exception e) {
             e.printStackTrace();
@@ -61,7 +64,7 @@ public class Loinc {
      */
     public ArrayList<LoincObject> getTodosOsLoincs() throws SQLException {
         String sql = "select * from LoincCore";
-        PreparedStatement statement = connectToDatabase().prepareStatement(sql);
+        PreparedStatement statement = conectarAoBanco().prepareStatement(sql);
         return Loinc.this.getLoincs(statement.executeQuery());
     }
     
@@ -73,7 +76,7 @@ public class Loinc {
      */
     public ArrayList<LoincObject> procurarPeloNumero(String numero) throws SQLException {
         String sql = "select * from LoincCore where LOINC_NUM LIKE ?";
-        PreparedStatement statement = connectToDatabase().prepareStatement(sql);
+        PreparedStatement statement = conectarAoBanco().prepareStatement(sql);
         statement.setString(1, "%" + numero + "%");
         return Loinc.this.getLoincs(statement.executeQuery());
     }
@@ -86,7 +89,7 @@ public class Loinc {
      */
     public ArrayList<LoincObject> procurarPeloComponente(String componente) throws SQLException {
         String sql = "select * from LoincCore where COMPONENT LIKE ?";
-        PreparedStatement statement = connectToDatabase().prepareStatement(sql);
+        PreparedStatement statement = conectarAoBanco().prepareStatement(sql);
         statement.setString(1, "%" + componente + "%");
         return Loinc.this.getLoincs(statement.executeQuery());
     }    
@@ -99,7 +102,7 @@ public class Loinc {
      */
     public ArrayList<LoincObject> procurarPeloNome(String nome) throws SQLException {
         String sql = "select * from LoincCore where LONG_COMMON_NAME LIKE ?";
-        PreparedStatement statement = connectToDatabase().prepareStatement(sql);
+        PreparedStatement statement = conectarAoBanco().prepareStatement(sql);
         statement.setString(1, "%" + nome + "%");
         return Loinc.this.getLoincs(statement.executeQuery());
     }  

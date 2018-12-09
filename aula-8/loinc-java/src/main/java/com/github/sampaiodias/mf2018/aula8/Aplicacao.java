@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class Aplicacao {
 
     public static void main(String args[]) throws SQLException {
-        Loinc loinc = new Loinc("root", "123456");
+        Loinc loinc = new Loinc("root", "123456", "localhost:3306");
         ArrayList<LoincObject> list = loinc.getTodosOsLoincs();
         for (LoincObject obj : list) {
             System.out.println(obj.number + " " + obj.commonName);
