@@ -13,7 +13,7 @@ import java.sql.SQLException;
  * @author Lucas Sampaio Dias
  */
 public class LoincObject {
-    public final String num;
+    public final String number;
     public final String component;
     public final String property;
     public final String timeAspect;
@@ -45,7 +45,7 @@ public class LoincObject {
             String status, 
             String versionFirstReleased, 
             String versionLastChanged) {
-        this.num = num;
+        this.number = num;
         this.component = component;
         this.property = property;
         this.timeAspect = timeAspect;
@@ -63,7 +63,7 @@ public class LoincObject {
     }
     
     public LoincObject(ResultSet result) throws SQLException {
-        this.num = result.getString("LOINC_NUM");
+        this.number = result.getString("LOINC_NUM");
         this.component = result.getString("COMPONENT");
         this.property = result.getString("LOINC_PROPERTY");
         this.timeAspect = result.getString("TIME_ASPCT");
@@ -85,7 +85,7 @@ public class LoincObject {
     public String toString() {
         StringBuilder builder = new StringBuilder();
         builder.append("Number: ");
-        builder.append(num);
+        builder.append(number);
         builder.append("\n");
         builder.append("Component: ");
         builder.append(component);

@@ -35,18 +35,12 @@ public class Loinc {
         return null;
     }
     
-    public ResultSet query(String mysqlQuery) {
-        try {
-            Connection conn = connectToDatabase();
-            Statement statement = conn.createStatement();
-            ResultSet result = statement.executeQuery(mysqlQuery);
-            return result;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-    
+    /**
+     * Obtém todos os Loincs contidos em um ResultSet.
+     * @param result
+     * @return
+     * @throws SQLException 
+     */
     public ArrayList<LoincObject> getLoincs(ResultSet result) throws SQLException {
         ArrayList<LoincObject> list = new ArrayList<>();
         while(result.next()) {
@@ -55,11 +49,28 @@ public class Loinc {
         return list;
     }
     
-    public ArrayList<LoincObject> searchByNumber(String loincNumber) throws SQLException {
+    /**
+     * Obtém todos os Loincs cadastrados no banco de dados.
+     * @return
+     * @throws SQLException 
+     */
+    public ArrayList<LoincObject> getTodosOsLoincs() throws SQLException {
+        String sql = "select * from LoincCore";
+        PreparedStatement statement = connectToDatabase().prepareStatement(sql);
+        return Loinc.this.getLoincs(statement.executeQuery());
+    }
+    
+    /**
+     * Procura todos os Loincs que correspondam ao número especificado.
+     * @param loincNumber
+     * @return
+     * @throws SQLException 
+     */
+    public ArrayList<LoincObject> procurarPeloNumero(String loincNumber) throws SQLException {
         String sql = "select * from LoincCore where LOINC_NUM LIKE ?";
         PreparedStatement statement = connectToDatabase().prepareStatement(sql);
         statement.setString(1, "%" + loincNumber + "%");
-        return getLoincs(statement.executeQuery());
+        return Loinc.this.getLoincs(statement.executeQuery());
     }
     
 }
