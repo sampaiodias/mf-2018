@@ -20,6 +20,11 @@ public class Loinc {
     private final String user;
     private final String password;
     
+    /**
+     * Cria uma instância válida para utilização do banco de dados Loinc.
+     * @param user Usuário do MySQL configurado na máquina.
+     * @param password Senha do Usuário informado.
+     */
     public Loinc(String user, String password) {
         this.user = user;
         this.password = password;
