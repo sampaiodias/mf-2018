@@ -40,5 +40,15 @@ public class LoincTest {
         ArrayList<LoincObject> list = loinc.getLoincs(r);
         assertEquals("R wave duration.lead AVR", list.get(0).component);
     }
+
+    @Test
+    public void testSearchByNumber() throws Exception {
+        ArrayList<LoincObject> actual = loinc.searchByNumber("12345");
+        
+        ArrayList<LoincObject> expected = new ArrayList<>();
+        expected.add(new LoincObject("12345-5", "", "", "", "", "", "", "", 0, "", "", "", "", "", ""));
+        
+        assertEquals(actual.get(0).num, expected.get(0).num);
+    }
     
 }

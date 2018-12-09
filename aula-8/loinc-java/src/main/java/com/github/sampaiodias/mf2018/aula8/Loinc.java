@@ -54,4 +54,12 @@ public class Loinc {
         }        
         return list;
     }
+    
+    public ArrayList<LoincObject> searchByNumber(String loincNumber) throws SQLException {
+        String sql = "select * from LoincCore where LOINC_NUM LIKE ?";
+        PreparedStatement statement = connectToDatabase().prepareStatement(sql);
+        statement.setString(1, "%" + loincNumber + "%");
+        return getLoincs(statement.executeQuery());
+    }
+    
 }

@@ -80,4 +80,54 @@ public class LoincObject {
         this.versionFirstReleased = result.getString("VersionFirstReleased");
         this.versionLastChanged = result.getString("VersionLastChanged");
     }
+    
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("Number: ");
+        builder.append(num);
+        builder.append("\n");
+        builder.append("Component: ");
+        builder.append(component);
+        builder.append("\n");
+        builder.append("Property: ");
+        builder.append(property);
+        builder.append("\n");
+        builder.append("Time Aspect: ");
+        builder.append(timeAspect);
+        builder.append("\n");
+        builder.append("System: ");
+        builder.append(system);
+        builder.append("\n");
+        builder.append("Scale Type: ");
+        builder.append(scaleType);
+        builder.append("\n");
+        builder.append("Method Type: ");
+        builder.append(methodType);
+        builder.append("\n");
+        builder.append("Class: ");
+        builder.append(loincClass);
+        builder.append("\n");
+        builder.append("Class Type: ");
+        builder.append(loincClassType);
+        builder.append("\n");
+        builder.append("Common Name: ");
+        builder.append(commonName);
+        builder.append("\n");
+        builder.append("Short Name: ");
+        builder.append(shortName);
+        builder.append("\n");
+        builder.append("Copyright: ");
+        builder.append(externalCopyrightNotice);
+        builder.append("\n");
+        builder.append("Status: ");
+        builder.append(status);
+        builder.append("\n");
+        builder.append("First Released Version: ");
+        builder.append(versionFirstReleased);
+        builder.append("\n");
+        builder.append("Last Changed Version: ");
+        builder.append(versionLastChanged);
+        return builder.toString();
+    }
 }
