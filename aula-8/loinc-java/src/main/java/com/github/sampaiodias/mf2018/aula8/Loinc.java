@@ -62,15 +62,28 @@ public class Loinc {
     
     /**
      * Procura todos os Loincs que correspondam ao número especificado.
-     * @param loincNumber
+     * @param numero
      * @return
      * @throws SQLException 
      */
-    public ArrayList<LoincObject> procurarPeloNumero(String loincNumber) throws SQLException {
+    public ArrayList<LoincObject> procurarPeloNumero(String numero) throws SQLException {
         String sql = "select * from LoincCore where LOINC_NUM LIKE ?";
         PreparedStatement statement = connectToDatabase().prepareStatement(sql);
-        statement.setString(1, "%" + loincNumber + "%");
+        statement.setString(1, "%" + numero + "%");
         return Loinc.this.getLoincs(statement.executeQuery());
     }
+    
+    /**
+     * Procura todos os Loincs que correspondam ao componente especificado.
+     * @param componente
+     * @return
+     * @throws SQLException 
+     */
+    public ArrayList<LoincObject> procurarPeloComponente(String componente) throws SQLException {
+        String sql = "select * from LoincCore where COMPONENT LIKE ?";
+        PreparedStatement statement = connectToDatabase().prepareStatement(sql);
+        statement.setString(1, "%" + componente + "%");
+        return Loinc.this.getLoincs(statement.executeQuery());
+    }    
     
 }

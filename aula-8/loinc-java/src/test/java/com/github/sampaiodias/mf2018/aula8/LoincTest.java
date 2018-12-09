@@ -25,7 +25,13 @@ public class LoincTest {
     public static void setUpClass() throws Exception {
         loinc = new Loinc("root", "123456");
     }
-
+    
+    @Test
+    public void testTodosOsLoincs() throws Exception {
+        ArrayList<LoincObject> list = loinc.getTodosOsLoincs();
+        assertEquals(list.size(), 87863);
+    }
+    
     @Test
     public void testProcurarPeloNumero() throws Exception {
         ArrayList<LoincObject> actual = loinc.procurarPeloNumero("12345");
@@ -37,12 +43,13 @@ public class LoincTest {
     }
     
     @Test
-    public void testTodosOsLoincs() throws Exception {
-        ArrayList<LoincObject> actual = loinc.procurarPeloNumero("12345");
+    public void testProcurarPeloComponente() throws Exception {
+        ArrayList<LoincObject> actual = loinc.procurarPeloComponente("R wave duration.lead A");
         
         ArrayList<LoincObject> expected = new ArrayList<>();
-        expected.add(new LoincObject("12345-5", "", "", "", "", "", "", "", 0, "", "", "", "", "", ""));
+        expected.add(new LoincObject("", "R wave duration.lead AVR", "", "", "", "", "", "", 0, "", "", "", "", "", ""));
         
-        assertEquals(actual.get(0).number, expected.get(0).number);
+        assertEquals(actual.get(0).component, expected.get(0).component);
     }
+    
 }
