@@ -107,4 +107,16 @@ public class Loinc {
         return Loinc.this.getLoincs(statement.executeQuery());
     }  
     
+    /**
+     * Procura todos os Loincs que correspondam ao nome curto especificado.
+     * @param nome
+     * @return
+     * @throws SQLException 
+     */
+    public ArrayList<LoincObject> procurarPeloNomeCurto(String nome) throws SQLException {
+        String sql = "select * from LoincCore where SHORTNAME LIKE ?";
+        PreparedStatement statement = conectarAoBanco().prepareStatement(sql);
+        statement.setString(1, "%" + nome + "%");
+        return Loinc.this.getLoincs(statement.executeQuery());
+    } 
 }

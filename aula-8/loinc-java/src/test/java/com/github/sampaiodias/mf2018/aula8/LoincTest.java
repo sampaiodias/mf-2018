@@ -29,7 +29,7 @@ public class LoincTest {
     @Test
     public void testTodosOsLoincs() throws Exception {
         ArrayList<LoincObject> list = loinc.getTodosOsLoincs();
-        assertEquals(list.size(), 87863);
+        assertEquals(87863, list.size());
     }
     
     @Test
@@ -39,7 +39,7 @@ public class LoincTest {
         ArrayList<LoincObject> expected = new ArrayList<>();
         expected.add(new LoincObject("12345-5", "", "", "", "", "", "", "", 0, "", "", "", "", "", ""));
         
-        assertEquals(actual.get(0).number, expected.get(0).number);
+        assertEquals(expected.get(0).number, actual.get(0).number);
     }
     
     @Test
@@ -49,14 +49,21 @@ public class LoincTest {
         ArrayList<LoincObject> expected = new ArrayList<>();
         expected.add(new LoincObject("", "R wave duration.lead AVR", "", "", "", "", "", "", 0, "", "", "", "", "", ""));
         
-        assertEquals(actual.get(0).component, expected.get(0).component);
+        assertEquals(expected.get(0).component, actual.get(0).component);
     }
     
     @Test
     public void testProcurarPeloNome() throws Exception {
         ArrayList<LoincObject> list = loinc.procurarPeloNome("CD10 cells/100 cells in");
         
-        assertEquals(list.size(), 8);
+        assertEquals(8, list.size());
+    }
+    
+    @Test
+    public void testProcurarPeloNomeCurto() throws Exception {
+        ArrayList<LoincObject> list = loinc.procurarPeloNomeCurto("CD10 Cells NFr");
+        
+        assertEquals(6, list.size());
     }
     
 }
